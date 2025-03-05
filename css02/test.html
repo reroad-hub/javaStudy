@@ -1,0 +1,111 @@
+<!-- 
+css 수업을 위한 기본 문서
+인터넷개론 과제했던것을 한페이지로 표시
+-->
+
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+        <!-- 스타일시트자리 -->
+        <style>
+            table{
+                border-collapse: collapse; /*경계 합치기*/
+                /*border: 1px solid #000000;*/
+                text-align: center;
+            }
+
+            table>thead{
+                background-color:rgb(221, 221, 221);
+            }
+            
+            table>tbody>tr:hover{
+                background-color: #ffff00;
+            }
+
+            table>thead>tr>th,
+            table>tbody>tr>td{
+                border: 1px dotted #000000; 
+                border-left: 1px none #ffffff;
+                border-right: 1px none #ffffff;
+            }      
+
+            .bottom{border-bottom: 2px solid rgb(172, 172, 172);}
+            .top{border-top: 2px solid rgb(172, 172, 172);}
+
+            </style> 
+    </head>
+    <body>
+        <h1>mysite</h1>
+        <h2>게시판</h2>
+        <h3>일반게시판</h3>
+        <h4>리스트</h4>
+
+        <table>
+            <colgroup>
+                <col style="width:50px;">
+                <col style="width:300px;">
+                <col style="width:80px;">
+                <col style="width:80px;">
+                <col style="width:100px;">
+                <col style="width:50px;">
+            </colgroup>
+            <thead>
+                <tr class="top">
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>조회수</th>
+                    <th>작성일</th>
+                    <th>관리</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="top">
+                    <td>123</td>
+                    <td><a href="">게시판 글입니다.</td>
+                    <td>정우성</td>
+                    <td>9999</td>
+                    <td>2025-02-25</td>
+                    <td>삭제</td>
+                </tr>
+                <tr>
+                    <td>123</td>
+                    <td><a href="">게시판 글입니다.</td>
+                    <td>정우성</td>
+                    <td>9999</td>
+                    <td>2025-02-25</td>
+                    <td>삭제</td>
+                </tr>
+                <tr>
+                    <td>123</td>
+                    <td><a href="">게시판 글입니다.</td>
+                    <td>정우성</td>
+                    <td>9999</td>
+                    <td>2025-02-25</td>
+                    <td>삭제</td>
+                </tr>
+                <tr>
+                    <td>123</td>
+                    <td><a href="">게시판 글입니다.</td>
+                    <td>정우성</td>
+                    <td>9999</td>
+                    <td>2025-02-25</td>
+                    <td>삭제</td>
+                </tr>
+                <tr class="bottom">
+                    <td>123</td>
+                    <td><a href="">게시판 글입니다.</td>
+                    <td>정우성</td>
+                    <td>9999</td>
+                    <td>2025-02-25</td>
+                    <td>삭제</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </body>
+</html>

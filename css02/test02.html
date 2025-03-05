@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+    <meta charset="UTF-8">
+    <title>document</title>
+    <link rel="stylesheet" href="./board2.css">       
+</head>
+<body>
+    <div class="big">
+        <h3>회원가입</h3>
+
+            <div class="home">
+                <ol id="hi">
+                    <li>홈</li>
+                    <li>유저</li>
+                    <li>회원가입</li>
+                </ol>
+            </div>    
+        <form>
+            <div class="form-group">
+                <label class="form-tt" for="uid">아이디</label>
+                <input id="uid" type="text">
+            </div>
+            <!--아이디-->
+
+            <div class="form-group">
+                <label class="form-tt" for="psw">패스워드</label>
+                <input id="psw" type="password">
+            </div>
+            <!--패스워드-->
+
+            <div class="form-group">
+                <label class="form-tt" for="name">이름</label>
+                <input id="name" type="text">
+            </div>
+            <!--이름-->
+
+            <div class="form-group">
+                <label class="form-tt" for="pro">프로필사진</label>
+                <input id="pro" type="file">
+            </div>
+            <!--프로필사진-->
+   
+            <div class="form-group address">
+                <label class="form-tt" for="add">주소</label>
+                <div>
+                    <input id="add" type="text">
+                    <input type="button" value="우편번호찾기">
+                    <input class="add2" type="text">
+                </div>
+            </div>
+            <!--주소-->
+
+            <div class="form-group">
+                <label class="form-tt" for="phon">이동통신사</label>
+                <select id="phon">
+                    <option>선택해주세요</option>
+                    <option>SKT</option>
+                    <option>KT</option>
+                    <option>LGU+</option>
+                    <option>기타</option>
+                </select>
+            </div>
+            <!--이동통신사-->
+
+            <div class="form-group">
+                <span class="form-tt">나이</span>
+
+                <label for="one">10대</label>
+                <input id="one" type="radio" name="agee" checked="checkbox">
+
+                <label for="two">20대</label>
+                <input id="two" type="radio" name="agee">
+
+                <label for="thr">30대</label>
+                <input id="thr" type="radio" name="agee">
+
+                <label for="for">40대</label>
+                <input id="for" type="radio" name="agee">
+
+                <label for="fiv">기타</label>
+                <input id="fiv" type="radio" name="agee">
+            </div>
+            <!--나이-->
+
+            <div class="form-group">
+                <span class="form-tt">혈액형</span>
+
+                <label for="aaa">A형</label>
+                <input id="aaa" type="radio" name="bld" checked="checkbox">
+
+                <label for="bbb">B형</label>
+                <input id="bbb" type="radio" name="bld">
+
+                <label for="ooo">O형</label>
+                <input id="ooo" type="radio" name="bld">
+
+                <label for="ab">AB형</label>
+                <input id="ab" type="radio" name="bld">
+            </div>
+            <!--혈액형-->
+
+            <div class="form-group">
+                <span class="form-tt">취미</span>
+                
+                <label for="book">독서</label>
+                <input id="book" type="checkbox" checked="checkbox">
+
+                <label for="music">음악</label>
+                <input id="music" type="checkbox">
+
+                <label for="trip">여행</label>
+                <input id="trip" type="checkbox">
+
+                <label for="movie">영화</label>
+                <input id="movie" type="checkbox">
+
+                <label for="coding">코딩</label>
+                <input id="coding" type="checkbox">
+
+                <label for="all">기타</label>
+                <input id="all" type="checkbox">
+            </div>
+            <!--취미-->
+
+            <div class="form-group2">
+                <span class="form-tt">자기소개</span>
+                <textarea></textarea>
+            </div>
+            <!--자기소개-->
+ 
+            <div class="form-group3">
+               <button type="submit">등록</button>
+               <button type="reset">초기화</button>
+            </div>
+            <!--등록/초기화-->
+    
+
+
+
+
+        </form>
+    </div>   
+</body>
+</html>

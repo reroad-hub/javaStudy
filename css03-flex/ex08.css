@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.container{
+    height: 200px;
+    border: 3px solid #000;
+    margin-bottom: 20px;
+}
+
+.container.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.container.column{
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+/*grow=늘리기 shrink=줄이기*/
+.item1{
+    border: 3px solid #ff0000;
+    flex-basis: 290px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.item2{
+    border: 3px solid #0000ff;
+    flex-basis: 290px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.item3{
+    border: 3px solid #00ff00;
+    flex-basis: 290px;
+    flex-grow: 1;
+    flex-shrink: 3;
+}

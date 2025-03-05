@@ -1,0 +1,83 @@
+<!-- 
+css 수업을 위한 기본 문서
+인터넷개론 과제했던것을 한페이지로 표시
+-->
+
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>document</title>
+        <!-- 스타일시트자리 -->
+        <style>
+            body{
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .box-red{
+                /*background-color: #ff0000;*/
+                width: 300px;
+                border: 1px solid #000000;
+                /*
+                margin-top: 10px;
+                margin-right: 20px;
+                margin-bottom: 30px;
+                margin-left: 40px;
+                */
+                /*margin: 10px 0px 30px 50px;*/ /*top부터 시계방향 순서 기준*/
+                /*margin: 50px;*/ /*전부*/
+                /*margin: 10px 50px;*/ /*상하, 좌우*/
+                margin: auto;
+                padding-top: 10px;
+                padding-right: 20px;
+                padding-bottom: 30px;
+                padding-left: 40px;
+            }
+
+            .box-green{
+                background-color: #00ff00;
+                width: 300px;
+                border: 1px solid #000000;
+                /*margin: 20px 0px 0px 0px;*/ /*margin = 콘텐츠 2개가 상하로 겹쳤을시 적용이 안되며 좌우는 적용된다*/
+                margin: 0px;
+                padding: 10px 40px;
+            }    
+
+            .box-pink{
+                width: 300px;
+                box-sizing: border-box;/*width 설정 값 고정 역할*/
+                border: 1px solid #000000;
+                background-color: #ff00ff;
+                padding: 0px 40px 0px 0px;
+            }
+
+            .i-red{
+                background-color: #ff0000;
+                border: 1px solid #000000;
+
+                margin: 10px 10px 10px 10px; /*상하로 겹쳐서 margin 적용안됨*/
+                padding: 10px 10px 10px 10px; 
+            }
+
+        </style> 
+    </head>
+
+    <body>
+        <div class="box-red">
+            css에서 가장 보편적이고 많이 사용되는 마진과 패딩에 대한 값이 어떻게 적용되는지 알아봅시다
+        </div>
+        <br>
+        <div class="box-green">
+            css에서 가장 보편적이고 많이 사용되는 마진과 패딩에 대한 값이 어떻게 적용되는지 알아봅시다
+        </div>
+        <br>
+        <div class="box-pink">
+            css에서 가장 보편적이고 많이 사용되는 마진과 패딩에 대한 값이 어떻게 적용되는지 알아봅시다
+        </div>
+        <span class="i-red">인라인요소에서 마진은 </span>
+        <span class="i-red">인라인요소에서 마진은 </span>
+   
+    </body>
+</html>

@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+/*----------aside page----------*/
+#content2 aside h2{
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #dddddd;
+}
+
+#content2 aside ul>li{
+    margin-top: 5px;
+    padding: 8px 10px 8px 10px;
+    border: 1px solid #000;
+}
+/*----------//aside page----------*/
+
+/*----------main page----------*/
+#content2 main .path-box{
+    padding: 20px 0px 7px 0px;
+    border-bottom: 1px solid #000;
+}
+
+#content2 main .path-box h3{
+    font-weight: bold;
+    font-size: 20px;
+    float: left;
+}
+
+#content2 main .path-box ol{
+    float: right;
+}
+
+#content2 main .path-box ol>li{
+    font-size: 15px;
+    float: left;
+}
+
+#content2 main .path-box ol>li::after{
+    padding: 0px 5px 0px 5px;
+    content: ">";
+}
+
+#content2 main .path-box ol>li:last-child::after{
+    content: "";
+}
+/*----------//main page----------*/
+
+/*----------text,serch----------*/
+#txt{
+    float: right;
+    margin: 20px 0px 5px 0px;
+    width: 150px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+#serch{
+    float: right;
+    margin: 20px 10px 5px 5px;
+    width: 50px;
+    height: 30px;
+}
+/*----------//text,serch----------*/
+
+/*----------table----------*/
+table>thead>.top>th{
+    background-color: #dddddd;
+    padding: 10px 10px 10px 10px;
+    border-bottom: 2px double #525151;
+    border-top: 2px solid #525151;
+}
+
+table>tbody>tr>td{
+    text-align: center;
+    padding: 15px 10px 10px 10px;
+    border-bottom: 1px dotted #000;
+}
+
+table>tbody>tr>.board{
+    text-align: left;
+}
+/*----------//table----------*/
+
+/*----------/page-number----------*/
+.page-number>ol{
+    text-align: center;
+}
+
+.page-number ol li::before{
+    content:"◀ ";
+}
+
+.page-number>ol>li:nth-child(n+2):nth-child(-n+10)::before{
+    content:"";
+}
+
+.page-number ol li::after{
+    content:" ▶";
+}
+
+.page-number>ol>li:nth-child(-n+9)::after{
+    content:"";
+}
+
+.page-number ol li{
+    display: inline-block;
+    margin: 10px 10px 10px 0px;
+}
+/*----------//page-number----------*/
+
+/*----------button----------*/
+.write button{ 
+    margin-bottom: 20px;
+    height: 40px;
+    width: 60px;
+    float: right;
+}
+/*----------//button----------*/

@@ -1,0 +1,80 @@
+<!-- 
+css 수업을 위한 기본 문서
+인터넷개론 과제했던것을 한페이지로 표시
+-->
+
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+        <!-- 스타일시트자리 -->
+         <style>
+            a{
+                text-decoration: none;
+                
+            }
+
+            .btm-gray{
+                display: inline-block;
+                width: 100px; height: 40px;
+                border-radius: 5px;
+                font-size: 20px;
+                text-align: center;
+                line-height: 40px;
+                cursor: pointer;
+
+                background-color: blueviolet;             
+                border: 1px solid #805a5a;
+            }
+
+            .btm-red{ 
+                width: 100px; height: 40px;
+                border-radius: 5px;
+                font-size: 20px;
+                text-align: center;
+                line-height: 40px;
+                cursor: pointer;
+
+                background-color: rgb(134, 45, 34);             
+                border: 1px solid #140b16;
+            }
+
+            .btm-blue{
+                width: 100px; height: 40px;
+                border-radius: 5px;
+                font-size: 20px;
+                text-align: center;
+                line-height: 40px;
+                cursor: pointer;
+
+                background-color: rgb(44, 35, 168);             
+                border: 1px solid #140b16;
+            }
+
+         </style>
+    </head>
+
+    <body>
+
+         <div class="btm-gray">저장버튼</div>
+         <br>   
+         <div class="btm-red">삭제버튼</div>
+         <br>
+         <div class="btm-blue">수정버튼</div>
+         <br>
+         <button class="btm-gray" type="submit">로그인</button>
+         <button class="btm-red" type="button">우편번호</button>
+         <br><br><br>
+         <a class="btm-gray" 
+            href="https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/">로그인
+         </a>
+         <br><br><br>
+         <a class="btm-red"
+            href="https://nid.naver.com/user2/join/agree?lang=ko_KR&realname=">회원가입
+         </a>
+
+
+    </body>
+</html>

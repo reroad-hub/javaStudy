@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+body{
+    font-family: 맑은고딕; 
+    font-size: 17px;
+}
+
+h2{
+    font-size: 25px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+p{
+    text-indent: 30px
+}
+
+.sheet{
+    font-family: 궁서체; 
+    font-size: 30px; 
+    letter-spacing: 15px;
+}
+
+.blue{
+    color: #0000ff;
+}
+
+.red{
+    color: #ff0000;
+}
+
+.green{
+    color: #00ff00;
+}
+.background{
+    background-color: #d9d9d9;
+}
+
+.italic{
+    font-style: italic; 
+}
+
+.bold{
+    font-weight: bold; 
+}   
+
+
+.underline{
+   text-decoration: underline;
+}
+
+ul{
+    list-style-type: square;
+}
+
+ol>li{
+    list-style-type:none;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+table>thead>tr>th{ background-color: #c8ebfa;
+}
+
+table>tbody>tr:hover{
+    background-color: #edd3ed;   
+}
+
+table>tbody>tr>td+td{
+    text-align: right;
+}
+
+table>tbody>tr>td+td::before{
+    content: "약 ";
+}
+
+table>tbody>tr>td+td::after{
+    content: " (MB/초)";
+}

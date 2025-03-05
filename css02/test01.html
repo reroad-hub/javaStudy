@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>document</title>
+    <link rel="stylesheet" href="./boad.css">
+</head>
+<body>
+    <div class="wrap">
+        <!--<h1>사이트명</h1>
+        <h2>고객센터</h2>-->
+        <!--게시판선택-->
+        <h3>일반게시판</h3>
+        
+                <ol id="path" class="clearfix">
+                    <li>홈</li>
+                    <li>게시판</li>
+                    <li>일반게시판</li>
+                </ol>
+        <form>
+
+            <div class="form-group">
+                <label class="form-txt" for="sel-board">게시판선택</label>
+                <select id="sel-board">
+                    <option>선택해주세요</option>
+                    <option>공지사항</option>
+                    <option>가입인사</option>
+                    <option>유머게시판</option>
+                    <option>기타게시판</option>
+                </select>
+            </div>  
+            <!--게시판선택-->   
+
+            <div class="form-group">
+                <label class="form-txt" for="txt-name">제목</label>
+                <input id="txt-name" type="text">
+            </div>
+            <!--제목-->
+
+            <div class="form-group">
+                <label class="form-txt" for="txt-pw">비밀번호</label>         
+                <input id="txt-pw" type="password">
+            </div>
+            <!--비밀번호-->
+
+            <div class="form-group">
+                <span class="form-txt">공개범위</span>
+                <label for="radio-me">본인</label>
+                <input id="radio-me" type="radio" name="scope">
+
+                <label for="radio-lg">로그인회원</label>
+                <input id="radio-lg" type="radio" name="scope">
+
+                <label for="radio-fd">친구</label>
+                <input id="radio-fd" type="radio" name="scope">
+
+                <label for="radio-all">전체</label>
+                <input id="radio-all" type="radio" name="scope" checked="checkbox" >
+            </div>
+            <!--공개범위-->
+
+            <div class="form-group">
+                <span class="form-txt">허용범위</span>
+
+                <label for="chk-reply">댓글허용</label>
+                <input id="chk-reply" type="checkbox" checked="checkbox"> 
+
+                <label for="chk-comment">답글허용</label>
+                <input id="chk-comment" type="checkbox"> 
+
+                <label for="chk-like">좋아요허용</label>
+                <input id="chk-like" type="checkbox"> 
+            </div>
+            <!--허용범위-->
+
+            <div class="form-group">
+                <textarea id="txt-content"></textarea>
+            </div>
+            <!--본문-->
+
+            <div class="form-group">
+                <label class="form-txt" for="txt">첨부파일</label>
+                <input id="txt" type="file">
+            </div>
+            <!--첨부파일-->
+
+            <div class="btn-group">
+                <button type="submit">등록</button>
+                <button type="reset">초기화</button>
+            </div>
+            <!--등록/초기화-->
+            
+        </form>
+
+    </div>
+    <!--/wrap-->
+</body>
+</html>
+
+
+

@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+body, div, ul, ol, li, dl, dt,
+h1, h2, h3, h4, h5, h6, 
+form, fieldset, legend, input, select, textarea, button,
+table, th, td, tr, p{
+ margin: 0px; padding: 0px;
+}
+
+input, textarea, select{
+    font-size: 15px;
+    font-family: inherit;
+}
+
+/*clearfix*/
+.clearfix::before, .clearfix::after{display: block; content: ""; line-height: 0;}
+.clearfix::after{clear: both;}
+
+ul>li, ol>li{
+    list-style-type: none;
+}
+
+
+body{
+    background-color: #808080;
+    font-family: 맑은고딕;
+    font-size: 12px;
+}
+
+h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.big{
+    width: 600px;
+    background-color: #fff;
+}
+
+.home{
+    height: 20px;
+    padding-top: 10px;
+}
+
+ol>li{
+    float: left;
+    list-style-type: none;
+}
+
+ol>li::after{
+    content: ">";
+}
+
+ol>li:last-child::after{
+    content: none;
+}
+
+.form-group{
+    border-bottom: 1px solid #000;
+    padding: 10px 0px 10px 0px;
+}
+
+.form-group .form-tt #uid{
+    clear: both;
+}
+
+.form-group2{
+    border-bottom: 3px solid #000;
+    padding: 10px 0px 10px 0px;
+}
+
+.form-group2 .form-tt{
+    float: left;
+}
+
+.form-group2 .form-tt       {
+
+}
+
+.form-group3{
+    text-align: center;
+    border: none;
+    padding: 10px 0px 10px 0px;
+}
+
+.form-tt{
+    display: inline-block;
+    font-size: 12px;
+    width: 120px;
+    text-align: center;
+}
+
+.address .form-tt{
+    vertical-align: top;
+}
+
+.address>div{
+    display: inline-block;
+}
+
+.address .add2{
+    margin: 10px 0px 0px 0px;
+    display: inline-block;
+    width: 100%;
+}
+
+button{
+    width: 120px;
+    height: 50px;
+}

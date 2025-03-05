@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+body, div, ul, ol, li, dl, dt,
+h1, h2, h3, h4, h5, h6, 
+form, fieldset, legend, input, select, textarea, button,
+table, th, td, tr, p{
+ margin: 0px; padding: 0px;
+}
+
+input, textarea, select{
+    font-size: inherit;
+    font-family: inherit;
+}
+
+/*clearfix*/
+.clearfix::before, .clearfix::after{display: block; content: ""; line-height: 0;}
+.clearfix::after{clear: both;}
+
+ul>li, ol>li{
+    list-style-type: none;
+}
+
+body{
+    background-color: #808080;
+    font-family: 맑은고딕;
+    font-size: 12px;
+}
+
+.wrap{
+    padding: 10px;
+    box-sizing: border-box;
+    width: 700px;
+    background-color: #ffffff;
+}
+
+h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+ol>li::after{
+    content: ">";
+}
+
+ol>li:last-child::after{
+    content: none;
+}
+
+#path li{
+    padding: 10px 0px 20px 0px;
+    float: left;
+}
+
+.form-group{
+    margin: 0px 0px 10px 0px;   
+}
+
+.form-group label{
+    display: inline-block;
+    /*border: 1px solid #000000;*/   
+}
+
+.form-group .form-txt{
+    width: 80px;
+    display: inline-block;
+    /*border: 1px solid #000000*/
+}
+
+.form-group #sel-board{
+    width: 200px;
+}
+
+.form-group .form-txt #sel-board{
+    clear: both;
+}
+
+.form-group #txt-name{
+    width: 550px; 
+}
+
+.form-group #txt-pw{
+    width: 200px; 
+}
+
+.form-group input[type="radio"],
+.form-group input[type="checkbox"]{
+    margin: 0px 10px 0px 0px;
+}
+
+.form-group #txt-content{
+    width: 630px;
+    height: 80px;
+}
+
+.btn-group{
+    padding: 15px 0px 10px 0px;
+    border-top: 2px solid #000000;
+    text-align: center;
+}
+
+.btn-group button{
+    width: 60px;
+    height: 30px;
+}

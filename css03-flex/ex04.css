@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+.container{
+    width: 500px;
+    height: 200px;
+    border: 3px solid #000;
+    margin-bottom: 20px;
+}
+
+.container.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.container.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.item1{
+    /*oreder는 숫자가 클수록 앞으로 배치된다
+    (자식이 가지고 있는 속성)*/
+    order: 0;
+    border: 3px solid #ff0000;
+}
+
+.item2{
+    align-self: flex-start;
+    order: 0;
+    border: 3px solid #0000ff;
+}
+
+.item3{
+    order: 0;
+    border: 3px solid #00ff00;
+}
