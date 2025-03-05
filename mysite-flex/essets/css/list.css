@@ -28,7 +28,7 @@ nav{
 }
 
 footer{
-    padding: 10px 10px;
+    padding: 20px 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -87,7 +87,6 @@ nav ul>li{
 /* //nav//--------------------*/
 
 /* aside--------------------*/
-
 .content-wrap{
     display: flex;
 }
@@ -105,15 +104,25 @@ h2{
     font-weight: bold;
     font-size: 20px;
 }
+
+.content-wrap .aside ul>li{
+    margin-bottom: 5px;
+    font-size: 17px;
+    border: 1px solid #000;
+    height: 30px;
+    line-height: 30px;
+}
 /* //aside//--------------------*/
 
-/* main1//--------------------*/
-
+/* main-board-------------------- */
+/* page-title--------------------*/
 .content{
     width: 100%;
 }
 
 .content>.page-title{
+    margin-left: 20px;    border-bottom: 1px solid #000;
+    margin-top: 35px;
     display: flex;
     justify-content:space-between;
 }
@@ -122,5 +131,96 @@ h2{
     display: flex;
 }
 
-/* //main1//--------------------*/
+.content>.page-title>ul>li::before{
+    padding: 0px 5px 0px 5px;
+
+   content: ">";
+}
+
+.content>.page-title>ul>li:nth-child(1)::before{
+     content: "";
+ }
+ 
+h3{
+    padding-bottom: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+/* //page-title//--------------------*/
+
+/* txt-serch-------------------- */
+.txt-serch{
+    height: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+}
+
+#src-box{
+    width: 50px;
+    margin-left: 5px;
+}
+/* //txt-serch//-------------------- */
+
+/* table-------------------- */
+table{
+    margin: 10px 0px 10px 20px;
+}
+
+table>thead>.top>th{
+    background-color: #dddddd;
+    padding: 10px 10px 10px 10px;
+    border-bottom: 2px double #525151;
+    border-top: 2px solid #525151;
+}
+
+table>tbody>tr>td{
+    text-align: center;
+    padding: 15px 10px 10px 10px;
+    border-bottom: 1px dotted #000;
+}
+
+table>tbody>tr>td.board{
+    text-align: left;
+}
+/* //table//-------------------- */
+
+/* page-number-------------------- */
+.page-number ol{
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+}
+
+.page-number ol>li{
+    margin: 0px 8px 20px 8px;
+}
+
+.page-number ol>li:nth-child(1)::before{
+    padding-right: 10px;
+    content: "◀";
+}
+
+.page-number ol>li:nth-child(10)::after{
+    padding-left: 10px;
+    content: "▶";
+}
+/* //page-number//-------------------- */
+
+/* wrt-box-------------------- */
+.writing{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 40px;
+}
+
+#wrt-box{
+    height: 40px;
+    width: 80px;
+}
+/* //wrt-box//-------------------- */
+/* //main-board//-------------------- */
+
+
+
 

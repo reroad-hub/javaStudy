@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            padding: 50px;
+        }
+
+        .wrap {
+            margin: 0px auto;
+            width: 1000px;
+            border: 1px solid #000;
+            position: static;
+        }
+
+        .box-red {
+            width: 300px;
+            height: 100px;
+            background-color: red;
+            position: static;
+        }
+
+        .box-green {
+            width: 400px;
+            height: 100px;
+            background-color: green;
+            position: static;
+        }
+
+        .box-pink {
+            width: 500px;
+            height: 100px;
+            background-color: pink;
+            position: static;
+        }
+
+        .scroll {
+            height: 5000px;
+            border: 1px solid #000;
+        }
+
+        .modal-bg {
+            padding: 100px;
+            width: 1500px;
+            height: 700px;
+            background-color: rgb(0, 0, 0, 0.4);
+            display: block;
+            /*검정색에 반투명*/
+        }
+
+        .modal-bg2 {
+            padding: 100px;
+            width: 100%;
+            /*가로전체*/
+            height: 100%;
+            /*세로전체*/
+            display: block;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background-color: rgb(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            margin: 0px auto;
+            height: 300px;
+            width: 500px;
+            border: 1px solid #000;
+            background-color: #fff;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 모든 요소는 position: static 값을 가진다 -->
+    <div class="wrap">
+        <div class="box-red">빨간상자</div>
+        <hr>
+        <div class="box-green">초록상자</div>
+        <hr>
+        <div class="box-pink">분홍상자</div>
+        <div class="scroll">스크롤</div>
+    </div>
+
+    <!-- 모달창 -->
+    <div class="modal-bg">
+        <div class="modal-content">
+            <form action="" method="">
+                <input type="text">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button type="submit">저장</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-bg2">
+        <div class="modal-content">
+            <form action="" method="">
+                <input type="text">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button type="submit">저장</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

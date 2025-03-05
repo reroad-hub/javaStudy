@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>MySite</title>
     <link rel="stylesheet" href="../../essets/css/reset.css">
-    <link rel="stylesheet" href="../../essets/css/mysite1.css">
     <link rel="stylesheet" href="../../essets/css/list.css">
 </head>
 
@@ -24,7 +23,7 @@
                 </li>
             </ul>
         </header>
-<!-- //header -->
+        <!-- //header -->
 
         <nav>
             <ul>
@@ -40,8 +39,8 @@
                 <li><a href="">방명록</a></li>
             </ul>
         </nav>
-<!-- //nav -->
- 
+        <!-- //nav -->
+
         <div class="content-wrap">
             <div class="aside">
                 <h2>게시판</h2>
@@ -54,6 +53,7 @@
                     </li>
                 </ul>
             </div>
+            <!-- aside -->
 
             <div class="content">
                 <div class="page-title">
@@ -64,13 +64,107 @@
                         <li>일반게시판</li>
                     </ul>
                 </div>
-                <div>내용</div>
+                <!-- page-title -->
+
+                <div class="txt-serch">
+                    <input type="text">
+                    <button id="src-box">검색</button>
+                </div>
+                <!-- txt-serch -->
+
+
+                <table>
+                    <colgroup>
+                        <col style="width: 100px;">
+                        <col style="width: 250px;">
+                        <col style="width: 150px;">
+                        <col style="width: 80px;">
+                        <col style="width: 220px;">
+                        <col style="width: 100px;">
+                    </colgroup>
+                    <thead>
+                        <tr class="top">
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>글쓴이</th>
+                            <th>조회수</th>
+                            <th>작성일</th>
+                            <th>관리</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>123</td>
+                            <td class="board">게시판 게시글입니다.</td>
+                            <td>박민규</td>
+                            <td>9999</td>
+                            <td>2025-03-01</td>
+                            <td>[삭제]</td>
+                        </tr>
+                        <tr>
+                            <td>124</td>
+                            <td class="board">게시판 게시글입니다.</td>
+                            <td>정우성</td>
+                            <td>9999</td>
+                            <td>2025-03-01</td>
+                            <td>[삭제]</td>
+                        </tr>
+                        <tr>
+                            <td>125</td>
+                            <td class="board">게시판 게시글입니다.</td>
+                            <td>유재석</td>
+                            <td>9999</td>
+                            <td>2025-03-01</td>
+                            <td>[삭제]</td>
+                        </tr>
+                        <tr>
+                            <td>126</td>
+                            <td class="board">게시판 게시글입니다.</td>
+                            <td>강호동</td>
+                            <td>9999</td>
+                            <td>2025-03-01</td>
+                            <td>[삭제]</td>
+                        </tr>
+                        <tr>
+                            <td>127</td>
+                            <td class="board">게시판 게시글입니다.</td>
+                            <td>이정재</td>
+                            <td>9999</td>
+                            <td>2025-03-01</td>
+                            <td>[삭제]</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- table -->
+
+                <div class="page-number">
+                    <ol>
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href="">6</a></li>
+                        <li><a href="">7</a></li>
+                        <li><a href="">8</a></li>
+                        <li><a href="">9</a></li>
+                        <li><a href="">10</a></li>
+                    </ol>
+                </div>
+                <!-- page-number -->
+
+                <div class="writing">
+                    <button id="wrt-box">글쓰기</button>
+                </div>
+                <!-- writing -->
             </div>
-
         </div>
-
-
+        <footer>
+            <p>copyright 2025 박민규. All right reserved</p>
+        </footer>
+        <!-- footer -->
     </div>
+<!-- wrap -->
 </body>
 
 </html>
