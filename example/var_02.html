@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 숫자 1개당 저장하는데 있어서 4바이트 용량이 필요하다 (영문자는 1바이트) -->
+    <script>
+        let num = 0;
+        num++;
+        document.write("num++ = " + num + "<hr>");
+
+        num = 2 * 3;
+        document.write("2 * 3 = " + num + "<hr>");
+
+        num = 2 ** 3;
+        document.write("2 ** 3 = " + num + "<hr>");
+
+        num = 7 / 3;
+        document.write("7 / 3 = " + num + "<hr>");
+
+        num = 7 % 3;
+        document.write("7 % 3 = " + num);
+        
+        num = 7 % 3;
+        console.log("7 % 3 = " + num); //console.log는 개발자모드 창에 나오게 된다
+
+        // var varNum = 1;
+        // varNum = varNum + 10;
+        // document.write("varNum = " + varNum + "<hr>");
+
+        // let letNum = "hello";
+        // letNum = letNum + varNum;
+        // document.write("letNum = " + letNum + "<hr>");
+
+        // const pi = 3.14;
+        // document.write("pi = " + pi);
+    </script>
+
+</body>
+
+</html>

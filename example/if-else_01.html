@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script> //confirm 사용시 페이지에 (예/취소) 선택란이 자동으로 나온다
+
+        let drink = prompt("이거 마시면 사귀는 거다!");
+        document.write("술마신다:" + drink + "<hr>");
+        if (drink === "yes") {
+            document.write("오늘부터 1일" + "<hr>");
+        }
+        else {
+            document.write("헤어진다" + "<hr>");
+        }
+        document.write("the end!!");
+
+        // let rain = confirm("비가 오나요?");
+        // console.log(rain);
+        // if (rain) {
+        //     document.write("우산을 든다 <hr>");
+        // }
+        // document.write("출근을 합니다. <hr>");
+    </script>
+</body>
+
+</html>
