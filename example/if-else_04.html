@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 멤버십이면 추가적으로 10%를 더 할인해줌  /13살 이하이면 1만원  /기본 입장료 2만원 -->
+
+<body>
+    <script>
+
+        let age = parseInt(prompt("나이를 입력하세요."));
+        let isMember = prompt("멤버쉽입니까? (예/아니오)");
+
+        let price = 20000;
+        let isDiscount = false;
+
+        if (age < 0 || !(isMember === "예" || isMember === "아니오")) {
+            document.write("잘못된 정보입니다.");
+        } else {
+
+            // isDiscount === false는 같은의미
+            // if의 첫번째값에는 isDiscount 적용안해도됨
+            if (age <= 13) {
+                document.write("어린이 할인이 적용 되었습니다.");
+                price = price * 0.5;
+                isDiscount = true;
+            } if (!isDiscount && age >= 60) {
+                document.write("노인 할인이 적용 되었습니다.");
+                price = price * 0.7;
+                isDiscount = true;
+            } if (!isDiscount && isMember === "예") {
+                document.write("멤버쉽 할인이 적용 되었습니다.");
+                price = price * 0.9;
+                isDiscount = true;
+            }
+
+            document.write("▶최종 입장료: " + price + "원");
+        }
+
+
+
+        // let age = parseInt(prompt("나이를 입력하세요."));
+        // let vip = prompt("멤버십입니까?");
+
+        // if (age < 0) {
+        //     document.write("올바른 나이를 입력해주세요.");
+        // } else {
+
+        //     if (age <= 13) {
+        //         document.write("어린이입니다. <br>");
+        //     } else {
+        //         document.write("성인입니다. <br>");
+        //     }
+        //     if (vip === ("네")) {
+        //         document.write("최종 입장료 9,000원 <br>");
+        //     }
+        //     else if (vip === "아니오") {
+        //         document.write("최종 입장료 10,000원 <br>");
+        //     }
+        // }
+
+
+
+
+        // let gender = prompt("성별을 입력하세요 (남/여)");
+        // let age = parseInt(prompt("나이를 입력하세요"));
+
+        // if (age < 0) {
+        //     document.write("올바른 나이를 입력해주세요.")
+        // } else {
+
+        //     if (age >= 20) {
+        //         document.write("성인입니다. <br>");
+        //         if (gender === "남") {
+        //             document.write("남자사우나는 오른쪽입니다. <br>");
+        //         } else if (gender === "여") {
+        //             document.write("여자사우나는 왼쪽입니다. <br>");
+        //         } else {
+        //             document.write("올바른 성별을 입력해주세요,.<br>");
+        //         }
+        //     } else {
+        //         document.write("미성년입니다.");
+        //     }
+
+        // }
+
+    </script>
+</body>
+
+</html>

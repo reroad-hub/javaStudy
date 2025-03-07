@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let balance = 100000;
+        let Withdraw = parseInt(prompt("출금할 금액을 입력하세요."));
+
+        if (Withdraw < 1) {
+            document.write("금액입력이 잘못 되었습니다.");
+        } else {
+
+            if (Withdraw > balance) {
+                document.write("잔액이 부족합니다.<br>");
+            } else {
+                if (Withdraw >= 50000) {
+                    document.write("큰 금액을 출금했습니다.신중히 생각하세요.<br>");
+                } else {
+                    document.write("적은 금액을 출금했습니다.<br>");
+                }
+
+                balance = balance - Withdraw;
+                document.write("잔액 : " + balance + ("원"));
+            }
+        }
+
+
+
+
+
+
+        // let money = parseInt(prompt("출금할 금액을 입력하세요."));
+        // let Withdraw = prompt("출금을 하시겠습니까? (예/아니오)");
+        // let balance = 100000;
+
+        // if (money > balance) {
+        //     document.write("잔액이 부족합니다.<br>");
+        // }
+        // else {
+        //     if (money >= 50000) {
+        //         document.write("큰 금액을 인출하셨습니다. 신중히 생각하세요.<br>");
+        //     } else {
+        //         document.write("작은 금액을 인출하셨습니다.<br>");
+        //     }
+
+        //     document.write("잔액: " + (parseInt(balance) - (money)) + ("원"));
+
+        // }
+
+    </script>
+</body>
+
+</html>
