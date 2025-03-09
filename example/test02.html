@@ -9,26 +9,58 @@
 
 <body>
     <script>
+        let balance = 500000;
+        let select = prompt("입출금 기능을 선택해주세요.(입금/출금)");
 
-        let balance = 100000;
-        let select = prompt("입출금 기능을 선택해주세요. (입금/출금)");
 
         if (select === "입금") {
             let deposit = parseInt(prompt("입금할 금액을 입력해주세요."));
+            document.write("입금을 완료하였습니다.<br>");
+
+            if (deposit >= 500000) {
+                document.write("큰 금액을 입금하셨습니다. 신중하게 사용하세요.<br>");
+            } else if (deposit >= 100000 && deposit < 500000) {
+                document.write("적당한 금액을 입금하셨습니다.<br>");
+            } else if (deposit > 0) {
+                document.write("조금만 더 저축하는 건 어떨까요?<br>");
+            }
+            balance = balance + deposit;
+            document.write("잔액: " + balance + "원")
+
+
+        } else if (select === "출금") {
+            let withdraw = parseInt(prompt("출금할 금액을 입력해주세요."));
+
+            // 🚨 잘못된 입력 예외 처리
+            if (isNaN(withdraw) || withdraw <= 0) {
+                document.write("잘못된 입력입니다. 올바른 금액을 입력해주세요.<br>");
+            } else if (withdraw > balance) {
+                document.write("잔액이 부족합니다. 출금할 수 없습니다.<br>");
+            } else {
+                document.write("출금을 완료하였습니다.<br>");
+
+                if (withdraw >= 500000) {
+                    document.write("큰 금액을 인출하셨습니다. 돈을 아끼세요.<br>");
+                } else if (withdraw >= 100000 && withdraw < 500000) {
+                    document.write("고객님의 금액을 출금하셨습니다.<br>");
+                } else if (withdraw > 0 && withdraw < 50000) {
+                    document.write("적은 금액을 인출하셨습니다.<br>");
+                }
+
+                balance = balance - withdraw; // 잔액 업데이트
+                document.write("잔액: " + balance + "원<br>");
+            }
+        } else {
+            document.write("잘못된 선택입니다. '입금' 또는 '출금'을 입력해주세요.<br>");
         }
 
 
 
 
-        if (deposit >= 500000) {
-            document.write("입금이 완료 되었습니다.<br>");
-        }
 
 
-        deposit = deposit + balance;
 
 
-        let Withdraw = parseInt(prompt("출금할 금액을 입력해주세요."));
 
 
 

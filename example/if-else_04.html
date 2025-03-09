@@ -65,27 +65,27 @@
 
 
 
-        // let gender = prompt("성별을 입력하세요 (남/여)");
-        // let age = parseInt(prompt("나이를 입력하세요"));
+        let gender = prompt("성별을 입력하세요 (남/여)");
+        let age = parseInt(prompt("나이를 입력하세요"));
 
-        // if (age < 0) {
-        //     document.write("올바른 나이를 입력해주세요.")
-        // } else {
+        if (age < 0) {
+            document.write("올바른 나이를 입력해주세요.")
+        } else {
 
-        //     if (age >= 20) {
-        //         document.write("성인입니다. <br>");
-        //         if (gender === "남") {
-        //             document.write("남자사우나는 오른쪽입니다. <br>");
-        //         } else if (gender === "여") {
-        //             document.write("여자사우나는 왼쪽입니다. <br>");
-        //         } else {
-        //             document.write("올바른 성별을 입력해주세요,.<br>");
-        //         }
-        //     } else {
-        //         document.write("미성년입니다.");
-        //     }
+            if (age >= 20) {
+                document.write("성인입니다. <br>");
+                if (gender === "남") {
+                    document.write("남자사우나는 오른쪽입니다. <br>");
+                } else if (gender === "여") {
+                    document.write("여자사우나는 왼쪽입니다. <br>");
+                } else {
+                    document.write("올바른 성별을 입력해주세요,.<br>");
+                }
+            } else {
+                document.write("미성년입니다.");
+            }
 
-        // }
+        }
 
     </script>
 </body>
