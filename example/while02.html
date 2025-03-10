@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let number = parseInt(prompt("숫자를 입력하세요 (1~10까지의 숫자):"));
+        let evenSum = 0;
+        let oddSum = 0;
+        let i = 1;  // 반복을 시작할 변수
+
+        if (number >= 1 && number <= 10) {
+            // while 문을 사용하여 1부터 입력한 숫자까지 반복
+            while (i <= number) {
+                if (i % 2 === 0) {
+                    evenSum += i; // 짝수 합산
+                } else {
+                    oddSum += i;  // 홀수 합산
+                }
+                i++;  // 반복할 때마다 1씩 증가
+            }
+
+            // 입력값에 대한 짝수/홀수 판단
+            if (number % 2 === 0) {
+                console.log(number + "은 짝수입니다.");
+            } else {
+                console.log(number + "은 홀수입니다.");
+            }
+
+            // 짝수 합과 홀수 합 출력
+            document.write("1부터 " + number + "까지의 짝수 합: " + evenSum + "<br>");
+            document.write("1부터 " + number + "까지의 홀수 합: " + oddSum);
+        } else {
+            alert("1부터 10까지의 숫자만 입력 가능합니다.");
+        }
+        
+    </script>
+</body>
+
+</html>

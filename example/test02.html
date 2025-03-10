@@ -31,7 +31,6 @@
         } else if (select === "출금") {
             let withdraw = parseInt(prompt("출금할 금액을 입력해주세요."));
 
-            // 🚨 잘못된 입력 예외 처리
             if (isNaN(withdraw) || withdraw <= 0) {
                 document.write("잘못된 입력입니다. 올바른 금액을 입력해주세요.<br>");
             } else if (withdraw > balance) {
@@ -47,21 +46,12 @@
                     document.write("적은 금액을 인출하셨습니다.<br>");
                 }
 
-                balance = balance - withdraw; // 잔액 업데이트
+                balance = balance - withdraw; 
                 document.write("잔액: " + balance + "원<br>");
             }
         } else {
             document.write("잘못된 선택입니다. '입금' 또는 '출금'을 입력해주세요.<br>");
         }
-
-
-
-
-
-
-
-
-
 
 
     </script>

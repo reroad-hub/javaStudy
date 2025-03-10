@@ -8,27 +8,7 @@
 </head>
 
 <body>
-
-    
     <script>
-        let coupon = parseInt(prompt("쿠폰 개수를 입력하시오"));
-        document.write("쿠폰: " + coupon + "장<hr>");
-        coupon = Math.floor(coupon / 10);
-        switch (coupon) {
-            case 2:
-                document.write("여행 가방");
-                break;
-            case 1:
-                document.write("다이어리");
-                break;
-            default:
-                document.write("커피 한잔");
-        }
-
-
-
-
-
 
         // let coupon = parseInt(prompt("쿠폰 개수를 입력하시오"));
         // document.write("쿠폰:" + coupon + "장<hr>");
@@ -47,6 +27,41 @@
         // else {
         //     document.write("집에 가");
         // }
+
+
+
+
+
+        // let coupon = parseInt(prompt("패키지 번호를 입력하시오"));
+        // document.write("패키지: " + coupon + "번<br>");
+        // switch (coupon) {
+        //     case 1:
+        //         document.write("돌고래쇼<br>"); //1번패키지
+        //         break;
+        //     case 2:
+        //         document.write("놀이기구 10종<br>"); //2번패키지
+        //         break;
+        //     default:
+        //         document.write("입장권"); //3번패키지
+        // }
+
+
+
+        let coupon = parseInt(prompt("쿠폰 개수를 입력하시오"));
+        document.write("쿠폰: " + coupon + "장<hr>");
+        coupon = Math.floor(coupon / 10);
+        switch (coupon) {
+            case 2:
+                document.write("여행 가방");
+                break;
+            case 1:
+                document.write("다이어리");
+                break;
+            default:
+                document.write("커피 한잔");
+        }
+
+
     </script>
 </body>
 

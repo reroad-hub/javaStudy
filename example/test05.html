@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // let taxi500 = 500;
+        // let taxi700 = 700;
+        // let BaseRate = 3000;
+        // let surcharge = 0;
+        // let taxiall = taxi500 + taxi700
+
+
+
+        // let km = parseInt(prompt("이동거리를 입력하세요.(km)"));
+        // let tm = parseInt(prompt("현재시간을 입력하세요.(0시~23시"));
+
+        // if (km <= 10) {
+        //     taxi500 = taxi500 * km;
+        // } else if (km > 10) {
+        //     taxi700 = taxi700 * km;
+
+        // } if(tm <= 6 || tm >= 22){
+        //     surcharge = taxiall * 1.2 ;
+        // } 
+
+
+        // document.write("최종요금: " + (3000 + surcharge ) +"원");
+
+
+        
+
+        let km = parseInt(prompt("이동거리를 입력하세요.(km)"));
+        let tm = parseInt(prompt("현재시간을 입력하세요.(0시~23시"));
+        let baseFare = 3000;
+        let perKmFare = 0;
+
+        if (km <= 10) {
+            perKmFare = 500;
+        } else {
+            perKmFare = 700;
+        }
+
+        let totalFare = baseFare + (km * perKmFare);
+
+        if (tm >= 22 || tm <= 6) {
+            totalFare = totalFare * 1.2;
+        }
+
+        document.write("최종 택시 요금: " + parseInt(totalFare) + "원");
+
+
+
+
+
+    </script>
+</body>
+
+</html>
