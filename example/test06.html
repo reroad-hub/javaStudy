@@ -10,17 +10,17 @@
 <body>
     <script>
 
-        let baseParkingFee = 5000;  
+        let baseParkingFee = 5000;
         let parkingFee = 0;
         let parkingTime = parseInt(prompt("주차 시간을 입력하세요. (분 단위)"));
-        let additionalFee = Math.floor(parkingTime / 10) * 500;
-     
 
-        let totalParkingFee = baseParkingFee + additionalFee;
-
-        if(parkingTime > 60){
-        document.write("최종 주차요금:" + totalParkingFee + "원");
+        if (parkingTime > 60) {
+            let additionalFee = Math.floor(parkingTime / 10) * 500;
+            totalParkingFee = baseParkingFee + additionalFee;
         }
+
+        document.write("최종 주차요금:" + totalParkingFee + "원");
+
 
 
 

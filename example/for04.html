@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 첫번째 for문이 첫번째로 실행이 되고 두번째 for문이 두번째로 실행이 되는데,두번째 for문이 첫번째 사이클에 끝나지 않음으로 두번째 for문이 끝날때까지 계속 반복된다. 두번째 for문이 다 끝나면 첫번째 for문으로 반복된다.
+
+        for (let dan = 2; dan < 10; dan++) {
+            document.write(dan + "단: ");
+
+            for (let num = 1; num < 10; num++) {
+                document.write(dan + "X" + num + "=" + dan * num + " ");
+            }
+            document.write("<hr>");
+        }
+
+
+
+
+
+        // 바깥쪽 for문은 i 값이 끝나지 않아서 계속 반복해서 j에게 값을 준다. 안쪽 for문은 한번씩 반복 될때마다 자기 할일이 끝나서 바깥쪽 for문으로 돌아간다.
+
+        for (let i = 1; i <= 5; i++) {
+
+            for (let j = 1; j <= i; j++) {
+                document.write("-" + " ");
+            }
+            document.write("<br>");
+        }
+
+
+
+
+
+        for (let i = 1; i <= 5; i++) {
+
+            for (let j = 1; j <= (6 - i); j++) {
+                document.write(j + " ");
+            }
+            document.write("<br>");
+        }
+
+
+
+
+
+        for (let i = 5; i >= 1; i--) {
+
+            for (let j = 1; j <= i; j++) {
+                document.write(j + " ");
+            }
+            document.write("<br>");
+        }
+
+
+
+
+
+        for (let i = 1; i <= 5; i++) {
+
+            for (let j = 5; j >= i; j--) {
+                document.write(j + " ");
+            }
+            document.write("<br>");
+        }
+
+
+
+    </script>
+</body>
+
+</html>

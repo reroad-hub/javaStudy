@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let count = 0;
+
+        for (let i = 2; i <= 100; i++) {
+            let k = 1;
+
+            for (let j = 2; j < i; j++) {
+                if (i % j === 0) {
+                    k = 0;
+                }
+
+            }
+            count += k;
+        }
+
+        document.write("소수의 개수: " + count);
+
+
+
+
+
+
+
+
+
+        // for (let i = 10; i <= 30; i++) {
+        //     document.write(i + "의 약수: ");
+
+        //     for (let j = 2; j <= (i / 2); j++) {
+        //         if (i % j === 0) {
+        //             document.write(j + " ");
+        //         }
+        //     }
+        //     document.write("<br>");
+        // }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script> 
+    //continue = 더 이상 밑으로 반복되지 않고 밑에 반복문을 건너뛴다. 그리고 처음으로 되돌아가서 반복을 다시 진행한다.
+
+        while (true) {
+            let select = parseInt(prompt("연산을 선택하세요(1:덧셈, 2:뺄셈, 3:곱셈, 4:나눗셈 )"));
+
+            if (select < 1 || select > 4) {
+                confirm("잘못 선택했습니다.");
+                continue;
+            }
+
+            let number1 = parseInt(prompt("첫번째 숫자를 입력하세요."));
+            let number2 = parseInt(prompt("두번째 숫자를 입력하세요."));
+            let result = 0;
+
+            if (select === 1) {
+                result = number1 + number2;
+            } else if (select === 2) {
+                result = number1 - number2;
+            } else if (select === 3) {
+                result = number1 * number2;
+            } else {
+                result = number1 / number2;
+
+            } document.write("연산의 결과: ", result);
+
+            break;
+        }
+
+
+
+        // while (true) {
+        //     let score = parseInt(prompt("점수를 입력하세요.(0~100)"));
+        //     if (score < 0 || score > 100) {
+        //         confirm("0~100 사이의 점수를 입력해 주세요.");
+        //         continue;
+        //     }
+        //     if (score > 60) {
+        //         document.write("합격입니다.");
+        //     } else {
+
+        //         document.write("불합격입니다.");
+        //     }
+        //     break;
+        // }
+
+    </script>
+</body>
+
+</html>

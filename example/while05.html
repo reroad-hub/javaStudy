@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let chance = 0;
+        let pw = "alsrb1234";
+
+        while (true) {
+            let inputPw = prompt("비밀번호를 입력하세요.");
+            chance++;
+
+            if (inputPw === pw) {
+                document.write("로그인에 성공했습니다.");
+                break;  //break로 if문을 나갔기 때문에 밑에 else를 적용하지 않아도 된다.
+            }
+
+            if (chance === 3) {
+                document.write("3회이상 실패하였습니다.<br> 접근이 차단되었습니다.");
+                break;
+            }
+
+        }
+
+
+
+
+        // let sum = 0;
+        // let number = 0;
+
+        // while (true) {
+        //     number++;
+        //     sum += number;
+
+        //     if (sum > 100) {
+        //         break;
+        //     }
+
+        // }
+
+        // document.write("입력한 숫자의 합계:" + sum + "<br>");
+        // document.write("100을 처음 넘었을때 마지막으로 더해진 숫자: " + number);
+
+    </script>
+</body>
+
+</html>

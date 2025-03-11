@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let count = 0;
+        let sum = 0;
+
+        while (count < 5) {
+            count++;
+            let number = parseInt(prompt(count + ("번째 숫자를 입력하세요.")));
+            sum += number;
+        }
+
+        document.write("숫자의 합계 : " + sum);
+
+
+        // let number = 0;
+        // let count = 0;
+        // let sum = 0;
+
+        // while (number < 100) {
+        //     number++;
+
+        //     if (number % 3 === 0) {
+        //         count++;
+        //         sum += number;
+        //         document.write(number + " " + "<br>");
+        //     }
+
+        // }
+        // document.write("1~100까지의 3의 배수의 개수: " + count + "개");
+        // document.write("<br> 1~100까지의 3의 배수의 합계: " + sum);
+
+    </script>
+</body>
+
+</html>

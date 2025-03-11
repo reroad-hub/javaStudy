@@ -9,34 +9,34 @@
 
 <body>
     <script> //원래의 숫자를 누적해서 더해주는 수식 (예시:num/sum)
-        // let number = 1;
-        // let sum = 0;
-        // while (number <= 10) {
-        //     sum = sum + number; //1+2+3+4+5+6+7+8+9    
-        //     number++;
-        // }
+        let number = 1;
+        let sum = 0;
+        while (number <= 10) {
+            sum = sum + number; //1+2+3+4+5+6+7+8+9    
+            number++;
+        }
 
-        // document.write("1~10 까지의 합계 : " + sum + "<br>");
+        document.write("1~10 까지의 합계 : " + sum + "<br>");
 
 
 
 
         //더해주거나 빼주는 값을 정할때는 반드시 초기값을 0으로 설정한다
-        let number = 0;
-        let evenSum = 0, oddSum = 0;
+        // let number = 0;
+        // let evenSum = 0, oddSum = 0;
 
-        while (number < 100) {
-            number++;
+        // while (number < 100) {
+        //     number++;
 
-            if (number % 2 === 0) {
-                evenSum = evenSum + number;
+        //     if (number % 2 === 0) {
+        //         evenSum += number;
 
-            } else {
-                oddSum = oddSum + number;
-            }
-        }   
-        document.write("1~100까지의 짝수의 합계 : " + evenSum + "<br>");
-        document.write("1~100까지의 홀수의 합계 : " + oddSum + "<br>");
+        //     } else {
+        //         oddSum = oddSum + number;
+        //     }
+        // }
+        // document.write("1~100까지의 짝수의 합계 : " + evenSum + "<br>");
+        // document.write("1~100까지의 홀수의 합계 : " + oddSum + "<br>");
 
     </script>
 </body>

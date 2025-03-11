@@ -31,21 +31,46 @@
 
             if (select === 1) {
                 result = first + second;
-                // document.write("연산의 결과: " , (first + second));
             } else if (select === 2) {
                 result = first - second;
-                // document.write("연산의 결과: " , (first - second));
             } else if (select === 3) {
                 result = first * second;
-                // document.write("연산의 결과: " , (first * second));
             } else {
                 result = first / second;
-                // document.write("연산의 결과: " , (first / second));
 
             } document.write("연산의 결과: ", result);
 
         }
 
+
+        
+        //while을 이용한 방법
+        while (true) {
+            let select = parseInt(prompt("연산을 선택하세요(1:덧셈, 2:뺄셈, 3:곱셈, 4:나눗셈 )"));
+
+            if (select < 1 || select > 4) {
+                confirm("잘못 선택했습니다.");
+                continue;
+
+            }
+
+            let number1 = parseInt(prompt("첫번째 숫자를 입력하세요."));
+            let number2 = parseInt(prompt("두번째 숫자를 입력하세요."));
+            let result = 0;
+
+            if (select === 1) {
+                result = number1 + number2;
+            } else if (select === 2) {
+                result = number1 - number2;
+            } else if (select === 3) {
+                result = number1 * number2;
+            } else {
+                result = number1 / number2;
+
+            } document.write("연산의 결과: ", result);
+
+            break;
+        }
 
 
 

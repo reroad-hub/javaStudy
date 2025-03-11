@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>while</h2>
+    <script> //보통 for문의 처음 변수는 i로 적용한다. (i,j,k) 순서로 깔끔하게 적용한다.
+        let i = 1;
+        while (i < 5) {
+            document.write(i + "<img src=../mysite/assets/img/image/Gangho-dong.jpg>");
+            i++;
+        }
+    </script>
+
+    <h2>for</h2>
+    <script>
+        for (let k = 1; k < 5; k++) {
+            document.write(k + "<img src=../mysite/assets/img/image/Gangho-dong.jpg>");
+        }
+    </script>
+
+    <br>
+    <h2>while</h2>
+    <script>
+        let a = 1;
+        while (a < 10) {
+            document.write(a + "<img src=../mysite/assets/img/image/Lee-Kwang-soo.jpg>");
+            a++;
+        }
+    </script>
+
+    <h2>for</h2>
+    <script>
+        let b = 1; //이 방식으로 적용하게 되면 for문 밖에서 적용가능
+        for (; b < 10; b++) {
+            document.write(b + "<img src=../mysite/assets/img/image/Lee-Kwang-soo.jpg>");
+        }
+    </script>
+</body>
+
+</html>
