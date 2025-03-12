@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function isDiscount(age, isMember) { // return 된 price값이 호출했던 isDiscount로 들어간다.(함수정의)
+            let price = 20000;
+
+            if (age <= 13) {
+                price = price * 0.5
+                document.write("어린이 할인이 적용 되었습니다."); //조건문 마다 적용해야 하는 값이 다르다면 조건문마다 return을 각각 적용해야 하지만 적용해야 하는 값이 같으므로 마지막에 한번에 묶어서 적용해준다. 
+
+            } if (age >= 60) {
+                price = price * 0.7
+                document.write("노인 할인이 적용 되었습니다.");
+
+
+            } if (isMember === "예") {
+                price = price * 0.9
+                document.write("멤버쉽 할인이 적용 되었습니다.");
+            }
+
+            return price; // return 안에 있는 값을 한 번에 호출해도 되는 경우이므로 마지막에 적용한다. (함수호출)
+        }
+
+        while (true) {
+            let age = parseInt(prompt("나이를 입력하세요."));
+            let isMember = prompt("멤버쉽입니까? (예/아니오)");
+
+
+            if (age < 0 || !(isMember === "예" || isMember === "아니오")) {
+                confirm("잘못된 정보입니다.");
+                continue;
+            }
+
+            let result = isDiscount(age, isMember);
+            document.write("▶최종 입장료: " + result + "원");
+            break;
+        }
+
+    </script>
+</body>
+
+</html>

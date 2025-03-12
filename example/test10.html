@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 첫번째 for문이 첫번째로 실행이 되고 두번째 for문이 두번째로 실행이 되는데,두번째 for문이 첫번째 사이클에 끝나지 않음으로 두번째 for문이 끝날때까지 계속 반복된다. 두번째 for문이 다 끝나면 첫번째 for문으로 반복된다.
+
+
+        for (let dan = 2; dan < 10; ++dan) {
+            document.write(dan + "단: ");
+
+            for (let num = 1; num < 10; ++num) {
+                document.write(dan + "X" + num + "=" + dan * num + " ");
+            }
+            document.write("<hr>");
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function max(n1, n2) {//max 3이 n1원에 전달, 5가 n2에 전달
+            return n1 > n2 ? n1 : n2;
+        } //함수 정의
+
+        let m = max(3, 5); //함수 호출
+        document.write(m);
+
+
+
+
+
+        function max(n1, n2) {//max 3이 n1원에 전달, 5가 n2에 전달
+            //함수 정의
+            if (n1 > n2) {
+                return n1;
+            } else {
+                return n2;
+            }
+        }
+        document.write(max(3, 5));
+
+
+
+        
+    </script>
+</body>
+
+</html>
