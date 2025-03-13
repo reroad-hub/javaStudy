@@ -10,21 +10,22 @@
 <body>
     <script>
 
-        //함수에 반드시 return값이 잇어야 되는건 아님
-        //return 설정 하지 않고 if/else문으로만 실행
+        // //함수에 반드시 return값이 잇어야 되는건 아님
+        // //return 설정 하지 않고 if/else문으로만 실행
 
-        function makeFood(num) {
-            if (num < 1 || food > 3) {
-                document.write("없는 음식을 주문하셨습니다.");
+        // function makeFood(num) {//-------------함수 정의
+        //     if (num < 1 || food > 3) {
+        //         document.write("없는 음식을 주문하셨습니다.");
 
-                return; //return문을 설정해 놓으면 if값이 trued일 시 함수가 종료된다. false일 시 밑으로 내려간다.
-            }           //이와 같이 잘못된 오류부터 설정해 놓게 되면 밑에 있는 코드들이 자동적으로 실행된다.
-            document.write("<img src='../음식사진/food" + num + ".png'>");
-            document.write("<hr>식사 맛있게 하세요.");
+        //         return; //return문을 설정해 놓으면 if값이 trued일 시 함수가 종료된다. false일 시 밑으로 내려간다.
+        //     }           //이와 같이 잘못된 오류부터 설정해 놓게 되면 밑에 있는 코드들이 자동적으로 실행된다.
+        //     document.write("<img src='../음식사진/food" + num + ".png'>");
+        //     document.write("<hr>식사 맛있게 하세요.");
 
-        }
-        const food = parseInt(prompt("햄버거=1, 피자=2, 감자튀김=3"));
-        makeFood(food);
+        // }//-------------------------함수 정의
+
+        // const food = parseInt(prompt("햄버거=1, 피자=2, 감자튀김=3"));
+        // makeFood(food); //----------------함수 호출
 
 
 
@@ -55,19 +56,20 @@
         // 함수안에 설정된 변수들은 종료 되면 사라지게 된다.
         // 예를 들면 함수 안에있는 let=result와 const=result가 다르다고 할 수 있다.
 
-        // function make(num) {
-        //     let result = "<img src='../음식사진/food" + num + ".png'>";
-        //     return result;
-        // }
-        // const food = parseInt(prompt("햄버거=1, 피자=2, 감자튀김=3"));
-        // if (food < 1 || food > 3) {
-        //     document.write("없는 음식을 주문하셨습니다.");
-        // } else {
-        //     const result = make(food);
-        //     document.write(result);
-        //     document.write("<hr>식사 맛있게 하세요.");
+        function make(num) {
+            let result = "<img src='../음식사진/food" + num + ".png'>";
+            return result;
+        }
+        
+        const food = parseInt(prompt("햄버거=1, 피자=2, 감자튀김=3"));
+        if (food < 1 || food > 3) {
+            document.write("없는 음식을 주문하셨습니다.");
+        } else {
+            const result = make(food);
+            document.write(result);
+            document.write("<hr>식사 맛있게 하세요.");
 
-        // }
+        }
 
 
 

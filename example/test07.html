@@ -11,7 +11,7 @@
     <script>    //함수 안에있는 변수(num)와 함수 밖에 있는 변수(num)가 같아도 다르게 식별한다.
 
 
-        function grade(num) {
+        function grade(num) { //----------------------함수 정의
             if (num >= 90 && num <= 100) {
                 return "A등급입니다.";
             } else if (num >= 80 && num <= 89) {
@@ -21,23 +21,25 @@
             } else {
                 return "D등급입니다.";
             }
-        }
+        } //----------------------함수 정의
 
-        let score = parseInt(prompt("점수를 입력하세요:(0~100)"));
+        while (true) {
+            let score = parseInt(prompt("점수를 입력하세요:(0~100)"));
 
-        if (score < 0 || score > 100) {
-            document.write("잘못입력했습니다.");
-        } else {
+            if (score < 0 || score > 100) {
+                confirm("잘못입력했습니다.");
+                continue;
 
-            if (score >= 60) {
+            } if (score >= 60) {
                 document.write("합격입니다. <br>");
-                let result = grade(score);
+                let result = grade(score); //----------------------함수 호출
                 document.write(result);
+
             } else {
                 document.write("불합격입니다.");
-            }
-        }
+            } break;
 
+        } 
     </script>
 </body>
 
