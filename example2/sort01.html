@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // sort 적용법
+        // a.localeCompare(b));  // 문자열을 사전식으로 비교
+
+        let scoreArr = [];
+
+        for (let i = 0; i < 10; i++) {
+            let score = Math.floor(Math.random() * 101);
+            scoreArr.push(score);
+        }
+
+        scoreArr.sort((a, b) => b - a);
+        document.write("<br>" + scoreArr);
+
+    </script>
+
+
+</body>
+
+</html>

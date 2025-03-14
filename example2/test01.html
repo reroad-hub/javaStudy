@@ -4,17 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>배열에 함수 추가하기</title>
+    <title>Document</title>
+
 </head>
 
 <body>
+    <input id="input" type="text" placeholder="입력하세요"> <!-- 사용자로부터 텍스트 입력을 받을 수 있는 텍스트 입력 필드를 생성 -->
+
+    <button onclick="changeString()">변경</button> <!-- 버튼을 클릭하면 'change' 함수가 호출되어 텍스트를 변경함 -->
+
+    <hr>
+
+    <h1 id="string" style="color: blue; background-color:antiquewhite;">초기문자</h1>
+    <!-- 텍스트가 표시될 영역, 텍스트가 변경되면 여기에 내용이 표시됨 -->
+
+
     <script>
+        // change 함수 정의
+        function changeString() {
+            // 'alter'라는 id를 가진 텍스트 입력 필드를 가져옴
+            const input = document.getElementById("input");
 
-        function inputData() {
-            let arr = [];
-            let index = 0;
+            // 'content'라는 id를 가진 h1 요소를 가져옴
+            const output = document.getElementById("string");
+
+            // 텍스트 입력 필드의 값을 h1 요소의 innerText로 설정하여 화면에 표시
+            output.innerText = input.value;
         }
-
 
 
     </script>

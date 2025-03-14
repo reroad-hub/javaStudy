@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // //(0~100)까지 10개의 난수 구하기
+
+        // let scoreArr = [];
+
+        // // 0부터 9까지 10번 반복하는 루프
+        // for (let i = 0; i < 10; i++) {
+
+        //     // Math.random() * 101은 0부터 100 사이의 랜덤 소수값을 생성
+        //     // Math.floor()는 소수점을 내림하여 정수로 만듦
+        //     let score = Math.floor(Math.random() * 101);  // 0부터 100까지의 랜덤 정수 생성
+
+        //     scoreArr.push(score); // 랜덤 점수(score)를 scoreArr 배열에 추가
+        // }
+        // // scoreArr 배열을 문자열로 변환하여 출력 (배열의 각 요소가 ','로 구분됨)
+        // document.write(scoreArr + "<br>");
+
+
+
+        //==========================================================================
+
+        let scoreArr = [];
+
+        for (let i = 0; i < 10; i++) {
+            let score = Math.floor(Math.random() * 101);
+            scoreArr.push(score);
+        }
+
+        document.write("<br>" + scoreArr + "<br>");
+
+        // scoreArr 배열의 각 요소를 map을 사용하여 처리
+        let mapArr = scoreArr.map((e) => { // 반복문이 없지만 map의 기능 중에서 요소를 새롭게 반환하는 속성이 있으므로 scoreArr 안에 있는 10번 호출을 한다.
+
+            if (e >= 60) {
+                return "합격";
+            } else {
+                return "불합격";
+            }
+
+        });
+
+        for (let i = 0; i < scoreArr.length; i++) {
+            document.write("<br> " + " 점수:" + scoreArr[i] + " 결과: " + mapArr[i]);
+        }
+        //=======================================================================
+
+        // document.write(mapArr);
+
+        //=======================================================================
+
+        let filterArr = scoreArr.filter((e) => e >= 60); //=>화살표 함수로 한줄로만 적용을 할 때 {}중괄호와 return을 생략 할 수 있다.
+
+        document.write("<hr>" + "60점 이상의 점수: " + filterArr);
+
+        //=======================================================================
+
+        let classArr = filterArr.map((a) => {
+            if (a >= 90) {
+                return "A등급.";
+            } if (a >= 80) {
+                return "B등급.";
+            } if (a >= 70) {
+                return "C등급.";
+            } if (a >= 60) {
+                return "D등급.";
+            }
+
+        });
+
+        document.write("<br> 등급: " + classArr);
+
+        //=======================================================================
+        //switch 활용
+
+
+        // let classArr = filterArr.map((a) => {
+        //     let result = Math.floor(a / 10);
+        //     switch (result) {
+        //         case 10:
+        //         case 9:
+        //             return "A";
+        //             break;
+        //         case 8:
+        //             return "B";
+        //             break;
+        //         case 7:
+        //             return "C";
+        //             break;
+        //         case 6:
+        //             return "D"
+        //             break;
+        //     }
+        // });
+
+        // document.write("<br> 등급: " + classArr);
+
+        //=======================================================================
+
+
+    </script>
+</body>
+
+</html>

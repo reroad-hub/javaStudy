@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //map() 함수는 자바스크립트에서 배열의 각 요소에 대해 주어진 함수를 호출하고, 그 반환값으로 구성된 새로운 배열을 반환하는 메서드입니다. 이 메서드는 원본 배열을 변경하지 않으며, 항상 새로운 배열을 반환합니다.
+
+        //filter와 map의 차이점 : map은 배열에 있는 요소를 변화만 시킬 뿐 버리지 않는다.
+
+        let arr = [10, 30, 4, 3, -2, -3, 25];
+
+        let mapArr = arr.map((e) => {
+            let result;
+
+            // e가 짝수인 경우 10을 더하고
+            if (e % 2 === 0) {
+                result = e + 10;
+                // e가 홀수인 경우 20을 더함
+            } else {
+                result = e + 20; // 계산된 결과 반환
+            }
+            return result;
+        }); //20, 40, 14, 23, 8, 17, 45
+
+        document.write(mapArr);
+
+
+
+
+
+
+        // let arr = [10, 30, 4, 3, -2, -3, 25];
+        // let mapArr = []
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     if (arr[i] % 2 === 0) {
+        //         mapArr[i] = arr[i] + 10;
+        //     } else {
+        //         mapArr[i] = arr[i] + 20;
+        //     }
+        // }
+
+
+        // document.write(mapArr);
+
+
+
+
+    </script>
+
+</body>
+
+</html>
