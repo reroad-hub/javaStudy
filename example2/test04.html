@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>문자열에서 단어 찾기</h1>
+
+    <!-- 사용자로부터 텍스트 입력을 받을 <textarea> -->
+    <textarea id="input"></textarea>
+
+    <br>
+
+    <!-- 사용자가 찾을 단어를 입력할 <input> -->
+    <input id="search" type="text">
+
+    <!-- 버튼을 클릭하면 countString() 함수가 실행 -->
+    <button onclick="countString()">단어 카운트</button>
+
+    <h2>결과:</h2>
+    <p id="count">단어출현 횟수:</p>
+
+
+    <script>
+        // countString 함수 정의
+        function countString() {
+
+            // 사용자가 입력한 텍스트를 가져오고 소문자로 변환하여 대소문자 구분 없이 처리
+            const input = document.getElementById("input").value.toLowerCase();
+
+            // 사용자가 찾을 단어를 가져오고 소문자로 변환
+            const search = document.getElementById("search").value.toLowerCase();
+
+            // 문자열에서 찾을 단어로 텍스트를 분리하여 배열로 만듬
+            const resultArr = input.split(search);
+
+            // 배열의 길이에서 1을 빼면 찾은 단어의 출현 횟수
+            let result = resultArr.length - 1;
+
+            // 결과를 페이지에 표시
+            count.innerText = "단어출력 횟수: " + result;
+
+        }
+
+    </script>
+
+
+
+    <h1>문자열에서 단어 찾기</h1>
+    <textarea id="textInput" rows="4" cols="50" placeholder="여기에 문장을 입력하세요"></textarea><br>
+    <input type="text" id="wordInput" placeholder="찾을 단어를 입력하세요">
+    <button onclick="countword()">단어 카운트</button>
+    <h3>결과</h3>
+    <p id="result"></p>
+
+    <script>
+        function countword() {
+            const text = document.getElementById("textInput").value.toLowerCase();
+            const word = document.getElementById("wordInput").value.toLowerCase();
+
+            const parts = text.split(word);
+            const count = parts.length - 1;
+
+            const result = document.getElementById("result");
+            result.innerText = "단어 출현 횟수 : " + count;
+        }
+
+    </script>
+
+</body>
+
+</html>

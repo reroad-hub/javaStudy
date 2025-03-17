@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string 객체의 인덱스 활용하기</title>
+</head>
+
+<body>
+    <script>
+
+        const s1 = "web ";
+        const s2 = "Programming";
+        document.write(`"${s1}"<hr>`);
+        document.write(`"${s2}"<hr>`);
+
+        document.write(`${s1.charAt(2)}<hr>`);
+        document.write(`${s1.concat(s2)}<hr>`);
+        document.write(`${s2.indexOf("a")}<hr>`);
+        document.write(`${s2.replace("m", "M")}<hr>`);
+        document.write(`${s2.search("i")}<hr>`);
+        document.write(`${s2.split("a")}<hr>`);
+        document.write(`${s2.substr(1, 4)}<hr>`);
+        document.write(`${s2.substring(1, 4)}<hr>`);
+        document.write(`${s2.slice(3, -1)}<hr>`);
+        document.write(`${s2.toLowerCase()}<hr>`);b
+        document.write(`${s2.toUpperCase()}<hr>`);
+        document.write(`+${s1.trim()}+<hr>`); //"web " 문자열에서 +를 추가하고 끝에 공백 부분을 제거함
+
+
+
+        
+
+        //문자열 회전시키기
+        let text = "Programming"
+
+        for (let i = 0; i <= text.length; i++) {
+            document.write(text + "<hr>");
+            let fistChar = text[0];
+            text = text.slice(1) + fistChar;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

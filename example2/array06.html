@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색 이름과 같은 색상의 문자 만들기</title>
+</head>
+
+<body>
+
+    <script>
+
+        // colorArray 배열에 5개의 색상 문자열이 저장되어 있습니다.
+        const colorArray = ["red", "aqua", "gray", "purple", "orange"];
+
+        // colorArray 배열을 순회하며, 각 색상에 대해 반복문을 실행합니다.
+        for (let color of colorArray) {
+            // document.write()를 사용해 HTML 문서에 내용을 추가합니다.
+            // 각 색상에 대해 <h1> 태그를 사용하여 색상을 출력합니다.
+            // style 속성을 사용하여 텍스트 색상을 color 변수에 저장된 색상으로 설정합니다.
+            // 텍스트로는 color 변수를 넣어 해당 색상이 출력됩니다.
+            document.write("<h1 style = 'color:" + color + "'>" + color + "</h1>");
+        }
+
+
+
+
+
+        // const dayString = "일월화수목금토";
+        // for (let day of dayString) {
+        //     document.write(day + "요일, ");
+        // }
+
+    </script>
+
+</body>
+
+</html>

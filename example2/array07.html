@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //split 적용 시 맨앞에 빈 공백도 요소적용, 빈문자도 요소에 포함
+
+        let str = "ttt auuu awww appp"
+        let splitStr = str.split("a");
+        document.write(splitStr);
+        document.write("<br>" + splitStr.length); //4가 나옴, split의 합 = a가 적용된 문자 +1
+
+
+
+    </script>
+</body>
+
+</html>

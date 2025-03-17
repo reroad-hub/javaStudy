@@ -10,7 +10,7 @@
 <body>
     <script>
 
-        // //(0~100)까지 10개의 난수 구하기
+        //(0~100)까지 10개의 난수 구하기
 
         // let scoreArr = [];
 
@@ -84,26 +84,26 @@
         //switch 활용
 
 
-        // let classArr = filterArr.map((a) => {
-        //     let result = Math.floor(a / 10);
-        //     switch (result) {
-        //         case 10:
-        //         case 9:
-        //             return "A";
-        //             break;
-        //         case 8:
-        //             return "B";
-        //             break;
-        //         case 7:
-        //             return "C";
-        //             break;
-        //         case 6:
-        //             return "D"
-        //             break;
-        //     }
-        // });
+        let classArr = filterArr.map((a) => {
+            let result = Math.floor(a / 10);
+            switch (result) {
+                case 10:
+                case 9:
+                    return "A";
+                    break;
+                case 8:
+                    return "B";
+                    break;
+                case 7:
+                    return "C";
+                    break;
+                case 6:
+                    return "D"
+                    break;
+            }
+        });
 
-        // document.write("<br> 등급: " + classArr);
+        document.write("<br> 등급: " + classArr);
 
         //=======================================================================
 
