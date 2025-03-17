@@ -24,6 +24,19 @@
         document.write(reverseString("abc")); //글자 순서가 뒤집혀서 출력,  abc가 맨 위 str변수로 이동
 
 
+  // []인덱스 length를 활용한 글자수 뒤집기 활용
+
+  function reverseString(str) { //str=변수로 설정
+            let result = ""; //결과를 저장할 빈 문자열 
+            for (let i = str.length - 1; i >= 0; i--) { //i=문자열의 길이 -1 , i는 "abc" 3글자로 3보다 0이 크거나 같을 시 i가 1씩 증감한다.
+                result += str[i];// []index는 숫자가 0부터 시작이므로 0,1,2 순으로 설정이되고, -- 순서가 큰 숫자부터 2,1,0이 된다. 그래서 숫자가 뒤집혀서 나열된다.
+                //반복할 때마다 'str'을 'result'에 추가
+            }
+
+            return result; //최종 결과 반환
+        }
+        // 함수를 호출하는 데 있어서 정수인 숫자는 [], length 가 적용이 안됨으로 reverseString("abc") 값에 적용이 안됨
+        document.write(reverseString("abc")); //글자 순서가 뒤집혀서 출력,  abc가 맨 위 str변수로 이동
 
 
 
