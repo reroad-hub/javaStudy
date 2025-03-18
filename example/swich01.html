@@ -10,57 +10,25 @@
 <body>
     <script>
 
-        // let coupon = parseInt(prompt("쿠폰 개수를 입력하시오"));
-        // document.write("쿠폰:" + coupon + "장<hr>");
-        // if (coupon >= 20) {
-        //     document.write("여행용 가방");
-
-        // }
-        // else if (coupon >= 10) {
-        //     document.write("다이어리");
-
-        // }
-        // else if (coupon >= 5) {
-        //     document.write("커피 한잔");
-
-        // }
-        // else {
-        //     document.write("집에 가");
-        // }
-
-
-
-
-
-        // let coupon = parseInt(prompt("패키지 번호를 입력하시오"));
-        // document.write("패키지: " + coupon + "번<br>");
-        // switch (coupon) {
-        //     case 1:
-        //         document.write("돌고래쇼<br>"); //1번패키지
-        //         break;
-        //     case 2:
-        //         document.write("놀이기구 10종<br>"); //2번패키지
-        //         break;
-        //     default:
-        //         document.write("입장권"); //3번패키지
-        // }
-
-
-
-        let coupon = parseInt(prompt("쿠폰 개수를 입력하시오"));
-        document.write("쿠폰: " + coupon + "장<hr>");
-        coupon = Math.floor(coupon / 10);
-        switch (coupon) {
-            case 2:
-                document.write("여행 가방");
-                break;
+        let count = parseInt(prompt("번호를 입력해 주세요. (1번, 2번, 3번)"));
+        document.write("입력하신 번호: " + count + "번 <hr>");
+        switch (count) {
             case 1:
-                document.write("다이어리");
+                alert("다이어리 증정");
+                document.write("다이어리를 증정해드리겠습니다.");
+                break;
+            case 2:
+                alert("상품권 증정");
+                document.write("상품권 증정해드리겠습니다.");
+                break;
+            case 3:
+                alert("텀블러 증정");
+                document.write("텀블러 증정해드리겠습니다.");
                 break;
             default:
-                document.write("커피 한잔");
+                alert("잘못된 번호입니다다.");
+                document.write("잘못 입력하셨습니다.");
         }
-
 
     </script>
 </body>

@@ -12,54 +12,45 @@
     <script>
 
         const studentObject = {
-            name: "박민규",
-            score: [],
-            grade: [],
+            name: "",
+            grade: "",
+            hobby: "",
+            skill: "",
 
-            addScore(result) {
-                if (result >= 60) {
-                    this.score.push(result);
-                    for (let s of this.score) {
-                        if (s >= 90 && s <= 100) {
-                            this.grade.push("A학점");
-                        } else if (s >= 80 && s <= 90) {
-                            this.grade.push("B학점");
-                        } else if (s >= 70 && s <= 80) {
-                            this.grade.push("C학점");
-                        } else {
-                            this.grade.push("D학점");
-                        }
-                    }
-                } else {
-                    document.write("점수가 너무 낮습니다. ");
-                }
+            // 학생 정보를 설정하는 메소드
+            studentInfo(name, grade, hobby, skill) {
+                this.name = name;
+                this.grade = grade;
+                this.hobby = hobby;
+                this.skill = skill;
             },
+            // 학생 정보를 입력받고 해당 정보를 화면에 출력하는 메소드
+            totalInput() {
+                // prompt를 사용해 사용자로부터 이름을 입력받음
+                let userInput = prompt("학생목록: (박민규, 최현범, 임서영, 김주언) 이름을 입력하세요.");
 
-            calculateGrade() {
-                for (let s of this.score) {
-                    if (s >= 90 && s <= 100) {
-                        this.grade.push("A학점");
-                    } else if (s >= 80 && s <= 90) {
-                        this.grade.push("B학점");
-                    } else if (s >= 70 && s <= 80) {
-                        this.grade.push("C학점");
-                    } else {
-                        this.grade.push("D학점");
-                    }
+                switch (userInput) {
+                    case "박민규":
+                        this.studentInfo("박민규", "1반", "운동", "축구");
+                        break;
+                    case "최현범":
+                        this.studentInfo("최현범", "2반", "게임", "농구");
+                        break;
+                    case "임서영":
+                        this.studentInfo("임서영", "3반", "공부", "야구");
+                        break;
+                    case "김주언":
+                        this.studentInfo("김주언", "4반", "달리기", "배구");
+                        break;
+                    default:
+                        alert("학생을 찾을 수 없습니다.");
+                        return;
                 }
-            },
-
-            totalResult() {
-                    document.write(`${this.name}님의 점수는 ${this.score.join(", ")}이며 등급은 ${this.grade.join(", ")}입니다.`);
-
+                document.write(`${this.name} - class: ${this.grade}, 취미: ${this.hobby}, 특기: ${this.skill}`);
             }
-
         };
-
-        studentObject.addScore(50);
-        studentObject.calculateGrade();
-        studentObject.totalResult();
-
+        // totalInput 메서드를 호출하여 사용자로부터 학생 이름을 입력받고 정보를 출력
+        studentObject.totalInput();
 
 
     </script>
