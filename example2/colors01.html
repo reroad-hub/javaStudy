@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무작위로 배경색 바꾸기</title>
+</head>
+
+<body>
+    <script>
+        // 16진수 색상 값 문자열
+        const letters = "0123456789ABCDEF";
+
+        // 초기 색상 값, '#'로 시작하여 6자리 16진수 색상 코드 생성 예정
+        let color = "#";
+
+        // 반복 횟수를 추적하는 변수
+        let count = 0;
+
+        // 1초마다 changeColor 함수를 실행하는 setInterval 설정
+        let intervalID = setInterval(changeColor, 1000);
+
+        // 색상 변경을 담당하는 함수
+        function changeColor() {
+
+            // 25번 색상을 변경한 후 interval을 종료
+            if (++count > 25) {
+                clearInterval(intervalID);
+
+                // 색상 코드를 생성 (6자리 16진수 색상 코드)
+            } for (let k = 0; k < 6; k++) {
+
+                // letters에서 랜덤한 문자를 선택하여 color 변수에 추가
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            // 생성된 색상 코드로 스타일을 설정한 div를 화면에 출력
+            document.write("<div style='background-color:"
+                + color + "'>" + color + "</div>");
+
+            // 색상 코드 초기화, '#'만 남기고 다시 시작
+            color = "#";
+
+        }
+
+
+
+
+
+        //화살표 함수 적용법
+
+        // const letters = "0123456789ABCDEF";
+        // let color = "#";
+        // let count = 0;
+        // let intervalID = setInterval(() => {
+        //     if (++count > 25) {
+        //         clearInterval(intervalID);
+        //     } for (let k = 0; k < 6; k++) {
+        //         color += letters[Math.floor(Math.random() * 16)];
+        //     }
+        //     document.write("<div style='background-color:"
+        //         + color + "'>" + color + "</div>");
+
+        //     color = "#";
+
+        // }, 1000);  // 1000ms마다 화살표 함수 실행
+
+
+    </script>
+</body>
+
+</html>

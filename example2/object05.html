@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체의 속성과 메서드 나열하기</title>
+</head>
+
+<body>
+    <script>
+        //this객체 안에 name, age라고 생각하면 된다.
+        // person 객체를 생성, name, age, intro라는 속성을 가짐
+        let person = {
+
+            //객체 안에 들어있는 구성 요소 이기때문에 ;이 아니라 ,를 적용
+            name: "park",
+            age: 27,
+            job: "soccerplayer",
+            // intro 함수: 객체(person)의 name과 age 값을 출력하는 함수
+            intro: function () {
+                // this를 사용하여 현재 객체(person)의 name과 age 값을 출력
+                document.write("My name: " + this.name + "<br>"
+                    + "age: " + this.age + "<br>" + "job: " + this.job);
+            }
+        };
+        // intro 메소드를 호출하여 person 객체의 정보를 출력
+        person.intro();
+
+    </script>
+</body>
+
+</html>

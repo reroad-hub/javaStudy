@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체의 속성과 메서드 나열하기</title>
+</head>
+
+<body>
+
+    <script>
+
+        // const car = {
+        //     brand: "Tesla",
+        //     model: "Model3",
+        //     year: 2022,
+        //     start() {
+        //         document.write(`brand: ${this.brand}<br> model: ${this.model} <br> is starting...`);
+        //     }
+        // };
+        // car.start();
+
+
+
+
+
+        // const book = {
+        //     title: "Javascript",
+        //     author: "박민규",
+        //     pages: 350,
+        //     publisher: "한빛미디어",
+        //     read() {
+        //         document.write(` Reading ${this.title} by ${this.author}.`);
+        //     }
+        // };
+        // book.read();
+
+
+
+
+
+        const calculator = {
+            add(a, b) {
+                return a + b;
+            },
+            subtrack(a, b) {
+                return a - b;
+            },
+            multiply(a, b) {
+                return a * b;
+            },
+            divide(a, b) {
+                return a / b;
+            }
+        };
+        document.write(calculator.add(10, 20) + "<br>");
+        document.write(calculator.subtrack(10, 20) + "<br>");
+        document.write(calculator.multiply(10, 20) + "<br>");
+        document.write(calculator.divide(10, 20));
+
+    </script>
+
+</body>
+
+</html>

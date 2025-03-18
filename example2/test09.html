@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생객체 만들기</title>
+</head>
+
+<body>
+
+    <script>
+
+        const studentObject = {
+            name: "박민규",
+            score: [],
+            grade: [],
+
+            addScore(result) {
+                if (result >= 60) {
+                    this.score.push(result);
+                    for (let s of this.score) {
+                        if (s >= 90 && s <= 100) {
+                            this.grade.push("A학점");
+                        } else if (s >= 80 && s <= 90) {
+                            this.grade.push("B학점");
+                        } else if (s >= 70 && s <= 80) {
+                            this.grade.push("C학점");
+                        } else {
+                            this.grade.push("D학점");
+                        }
+                    }
+                } else {
+                    document.write("점수가 너무 낮습니다. ");
+                }
+            },
+
+            calculateGrade() {
+                for (let s of this.score) {
+                    if (s >= 90 && s <= 100) {
+                        this.grade.push("A학점");
+                    } else if (s >= 80 && s <= 90) {
+                        this.grade.push("B학점");
+                    } else if (s >= 70 && s <= 80) {
+                        this.grade.push("C학점");
+                    } else {
+                        this.grade.push("D학점");
+                    }
+                }
+            },
+
+            totalResult() {
+                    document.write(`${this.name}님의 점수는 ${this.score.join(", ")}이며 등급은 ${this.grade.join(", ")}입니다.`);
+
+            }
+
+        };
+
+        studentObject.addScore(50);
+        studentObject.calculateGrade();
+        studentObject.totalResult();
+
+
+
+    </script>
+</body>
+
+</html>

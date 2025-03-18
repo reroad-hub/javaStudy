@@ -23,7 +23,12 @@
             document.write("<h1 style = 'color:" + color + "'>" + color + "</h1>");
         }
 
-
+        let arr = [1, 2, 3, 4, 5, 6, 7];
+        let sum = 0; // sum을 0으로 초기화 (반드시 필요)
+        for (let num of arr) {
+            sum += num;
+        }
+        document.write(`배열의 합: ${sum}`);
 
 
 

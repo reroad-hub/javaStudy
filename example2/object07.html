@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열을 이용해서 객체 나열하기</title>
+</head>
+
+<body>
+
+    <!-- filter 이용해서 remove 시키기 -->
+    <script>
+
+        const shoppingCart = { //const로 선언된 객체는 객체 자체의 참조를 변경할 수 없지만, 객체의 내부 속성이나 배열 항목은 변경 가능합니다.
+            items: [],
+            addItem(item) {
+                this.items.push(item);
+                console.log(`${item} added to cart`);
+            },
+            removeItem(item) {
+                this.items = this.items.filter((e) => e !== item);
+                console.log(`${item} remove to cart`);
+
+            },
+            listItems() {
+                document.write(this.items);
+            }
+        };
+        shoppingCart.addItem("검정자켓");
+        shoppingCart.addItem("청바지");
+        shoppingCart.addItem("목도리");
+
+        shoppingCart.removeItem("청바지");
+
+        shoppingCart.listItems();
+
+
+
+        // //중간에 숫자 30 넣기
+        // let arr = [10, 20, 40, 50];
+        // arr.splice(2, 0, 30);
+        // document.write(arr);
+
+
+
+
+        const bankAccount = {
+            owner: "P.M.G",
+            balance: 10000,
+            accountNumber: "1654-45757-10954",
+
+            deposit(amount) {
+                this.balance = this.balance + amount;
+                console.log(`${amount}입금`);
+            },
+            withdraw(amount) {
+                if (this.balance < amount) {
+                    document.write("잔액이 부족합니다.");
+                } else {
+                    this.balance = this.balance - amount;
+                    console.log(`${amount}출금`);
+
+                }
+            },
+            displayBalance() {
+                document.write(`${this.owner}님의 잔액은 ${this.balance}입니다. <br>`);
+            }
+        };
+        bankAccount.displayBalance();
+        bankAccount.deposit(20000);
+        bankAccount.withdraw(10000);
+        bankAccount.displayBalance();
+
+
+
+
+    </script>
+</body>
+
+</html>
