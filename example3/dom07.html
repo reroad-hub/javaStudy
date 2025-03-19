@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 변경하기</title>
+</head>
+
+<body style="text-align: center">
+    <img id="image" src="../media/media/photo1.jpg"><br>
+    <input type="button" value="change" onclick="changeImage()">
+
+    <script>
+        // let toggle = 1;
+        // function changeImage() {
+        //     if (++toggle % 2 === 0) {
+        //         document.getElementById("image").src = "../media/media/photo2.jpg";
+        //     } else {
+        //         document.getElementById("image").src = "../media/media/photo1.jpg";
+        //     }
+        // }
+
+
+        let toggle = true;
+        function changeImage() {
+            if (toggle) {
+                document.getElementById("image").src = "../media/media/photo2.jpg";
+            } else {
+                document.getElementById("image").src = "../media/media/photo1.jpg";
+            }
+            toggle = !toggle;
+
+        }
+
+    </script>
+</body>
+
+</html>

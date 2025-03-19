@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크박스에서 값 읽기</title>
+</head>
+
+<!-- <body>
+    <input type="checkbox" id="myCheckbox"> 다음 단계 진행 확인!<br>
+    <input type="button" value="process" onclick=" getCheckbox()"><br>
+    <p id="result"></p>
+
+    <script>
+        function getCheckbox() {
+            if (document.getElementById("myCheckbox").checked === true) {
+                document.getElementById("result").innerText = "작업을 진행하겠습니다.";
+            } else {
+                document.getElementById("result").innerText = "사용자의 요구로 중단!";
+            }
+        };
+
+    </script>
+</body> -->
+
+
+<body>
+    <form>
+        <input type="checkbox" id="myAdd1" name="myAdd" value="1500" onclick="getCheckbox()">
+        <label for="myAdd1">추가채소 1500원</label><br>
+        <input type="checkbox" id="myAdd2" name="myAdd" value="1000" onclick="getCheckbox()">
+        <label for="myAdd2">추가음료 1000원</label><br>
+        <input type="checkbox" id="myAdd3" name="myAdd" value="500" onclick="getCheckbox()">
+        <label for="myAdd3">추가피클 500원</label>
+        <hr>
+        <p id="result">추가금액: 0원</p>
+        <input type="button" value="reset" onclick="resetOder()">
+        <!-- <button type="reset" onclick="resulRest()">reset</button> -->
+    </form>
+
+    <script>
+        function getCheckbox() {
+            let sum = 0; // 합산 금액을 0으로 초기화
+            const adds = document.getElementsByName("myAdd"); // 모든 체크박스를 가져옴
+
+            // 체크된 항목들의 합을 계산
+            for (let i = 0; i < adds.length; i++) {
+                if (adds[i].checked) { // 체크된 항목인지 확인
+                    sum = sum + parseInt(adds[i].value); // 체크된 항목의 금액을 sum에 더함
+                }
+            }
+            document.getElementById("result").innerText = `추가금액: ${sum}원`;
+        }
+
+        // 리셋 버튼 클릭 시 호출되는 함수
+        function resetOder() {
+            let reset = 0;
+            const adds = document.getElementsByName("myAdd");
+            for (let i = 0; i < adds.length; i++) {
+                adds[i].checked = false; // 각 체크박스를 unchecked 상태로 변경
+            }
+            // 화면에 초기 금액을 0원으로 표시
+            document.getElementById("result").innerText = `추가금액: ${reset}원`;
+
+        }
+
+    </script>
+</body>
+
+
+
+
+</html>

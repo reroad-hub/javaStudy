@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라디오버튼/드롭박스에서 값 읽기</title>
+</head>
+
+<!-- <body>
+
+    <input id="color1" type="radio" name="color" value="red" checked>
+    <label for="color1">RED</label><br>
+    <input id="color2" type="radio" name="color" value="green" checked>
+    <label for="color2">GREEN</label><br>
+    <input id="color3" type="radio" name="color" value="blue" checked>
+    <label for="color3">BLUE</label><br>
+
+    <input type="button" value="choice" onclick="getRadio()">
+    <hr>
+    <h2 id="result"></h2>
+
+    <script>
+        function getRadio() {
+            const choice = document.querySelectorAll(`[type="radio"]`);
+            for (let i = 0; i < choice.length; i++) {
+                if (choice[i].checked) {
+                    document.getElementById("result").innerText = `${choice[i].value}`;
+                    break;
+                }
+            }
+        };
+
+    </script>
+</body> -->
+
+
+
+
+
+<body>
+    <p>키우고 싶은 동물은?</p>
+    <select id="myOption">
+        <option value="dog">개</option>
+        <option value="cat">고양이</option>
+        <option value="duck">오리</option>
+        <option value="koala">코알라</option>
+    </select>
+    <br>
+    <input type="button" value="클릭" onclick="getSelect()">
+    <hr>
+    <h2 id="result"></h2>
+    <script>
+        
+        function getSelect() {
+            const index = document.getElementById("myOption").selectedIndex;
+            const st = document.getElementById("myOption").options[index].value;
+            document.getElementById("result").innerText = st;
+        }
+
+    </script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>

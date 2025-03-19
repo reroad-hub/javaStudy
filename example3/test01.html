@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="checkbox" id="check1" name="myAdd" value="1500" checked onclick="getCheckbox('check1')">
+    <label for="check1">추가채소 1500원</label><br>
+    <input type="checkbox" id="check2" name="myAdd" value="1000" onclick="getCheckbox('check2')">
+    <label for="check2">추가음료 1000원</label><br>
+    <input type="checkbox" id="check3" name="myAdd" value="500" onclick="getCheckbox('check3')">
+    <label for="check3">추가피클 500원</label><br>
+    <hr>
+    <p id="result">추가금액: 0원</p>
+    <input type="button" value="reset" onclick="resetOder()">
+
+    <script>
+        let sum = 0; //총합 초기화
+        const items = document.getElementsByName("myAdd"); //myAdd라는 이름을 가진 모든 체크박스를 가져옴 
+        for (let item of items) {
+            if (item.checked) { //체크된 항목만 합산
+                sum = sum + parseInt(item.value); //체크된 항목의 값을 합산
+            }
+        }
+
+        // 체크박스 클릭 시 호출되는 함수
+        function getCheckbox(id) {
+            const item = document.getElementById(id); //클릭된 체크박스를 가져옴 
+            if (item.checked) { //체크된 상태라면
+                sum = sum + parseInt(item.value); //값을 합산
+            } else {  //체크가 해제되면
+                sum = sum - parseInt(item.value); //값을 차감
+            }
+
+            document.getElementById("result").innerText = `추가금액: ${sum}원`;;
+        }
+
+        // 리셋 버튼 클릭 시 호출되는 함수
+        function resetOder() {
+            sum = 0;
+            for (let item of items) {
+                item.checked = false; //모든 체크박스를 해제
+            }
+            document.getElementById("result").innerText = `추가금액: 0원`;
+
+        }
+
+    </script>
+</body>
+
+</html>

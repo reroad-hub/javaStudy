@@ -23,16 +23,29 @@ innerHTML: HTML 태그를 포함하여 전체 마크업을 반환함. -->
             const year = parseInt(document.getElementById("year").value);
             const month = parseInt(document.getElementById("month").value);
             const day = parseInt(document.getElementById("day").value);
-            const today = new Date();
+
+            // 현재 날짜를 구함
+            const today = new Date();// 오늘 날짜
+
+            // 사용자가 입력한 날짜를 Date 객체로 생성 (월은 0부터 시작하므로 1을 빼야 함)
             const inputDate = new Date(year, month - 1, day);
+
+            // 현재 날짜와 입력한 날짜 간의 시간 차이를 밀리초로 계산
             const timeDiff = today - inputDate;
+
+            // 밀리초 차이를 일수로 변환 (소수점 이하를 내림)
             const dayDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 
+            // 현재 날짜를 표시 (로케일에 맞는 날짜 형식으로 표시)
             document.getElementById("today").innerHTML = `${today.toLocaleString()}`;
+
+            // 입력 날짜와 오늘 날짜 간의 차이에 따라 결과를 다르게 표시
             if (dayDiff >= 0)
-                document.getElementById("result").innerHTML = `${-(dayDiff)}일 전`;
+                // 입력 날짜가 과거인 경우 "일 전" 출력
+                document.getElementById("result").innerHTML = `${-dayDiff}일 전`;
             else
-                document.getElementById("result").innerHTML = `${-(dayDiff)}일 남았음`;
+                // 입력 날짜가 미래인 경우 "일 남았음" 출력
+                document.getElementById("result").innerHTML = `${-dayDiff}일 남았음`;
         }
 
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생객체 만들기</title>
+</head>
+
+<body>
+    <script>
+
+        const student = {
+            id: "20160001234",
+            name: "박민규",
+            scores: [],
+
+            addscore(score) {
+                this.scores.push(score);
+                console.log(`${score.subject} ${score.score}점 입력`);
+            },
+
+            getTotal() {
+                let sum = 0;
+                for (let s of this.scores) {
+                    sum = sum + s.score; // s옆에 score을 붙히는 이유: 붙히지 않게 되면 subject값도 같이 가져오기 때문에
+                    //getTotal은 점수 합산 함수이므로 score만 추가해서 가져온다.
+                }
+                return sum;
+            },
+            getAverage() {
+                let sum = this.getTotal();
+                let avg = sum / this.scores.length;
+                return avg;
+            }
+        };
+
+        student.addscore({ subject: "javaScript", score: 85 });
+        student.addscore({ subject: "html", score: 95 });
+        student.addscore({ subject: "css", score: 75 });
+        student.addscore({ subject: "java", score: 88 });
+
+        document.write(student.getTotal() + "<br>");
+        document.write(student.getAverage());
+
+    </script>
+</body>
+
+</html>
