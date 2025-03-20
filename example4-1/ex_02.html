@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+    </style>
+    <h3 id="target">사이트 추가하기</h3>
+    <input type="button" value="add" onclick="addNode('https://daum.net')">
+
+    <script>
+        // function addNode(t){
+        //     let node = document.createElement("a");
+        //     node.href = t;
+        //     node.innerHTML = `<hr>${t}`;
+        //     document.getElementById("target").appendChild(node);
+        // }
+        function addNode(t){
+            let node1 = document.createElement("hr");
+            let node2 = document.createElement("a");
+            node2.href = t;
+            node2.innerText = t;
+            document.body.appendChild(node1);
+            document.body.appendChild(node2);
+        }
+        //createElements("tag") <tag>노드를 생성한다.
+    </script>
+</body>
+</html>

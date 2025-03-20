@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+
+    </style>
+    <div id="target" class="clearfix">
+        <img src="../../img/TalkFile_media.zip/africa.jpg" id="img">
+        <div>
+            <button id="btn1" onclick="changeImg(-1)">이전</button>
+            <button id="btn2" onclick="changeImg(1)">다음</button>
+        </div>
+    </div>
+    <script>
+        // 문제풀이
+        let index = 0
+        let ImageArr = [
+            "../../img/TalkFile_media.zip/africa.jpg",
+            "../../img/TalkFile_media.zip/africa1.jpg",
+            "../../img/TalkFile_media.zip/africa2.jpg",
+            "../../img/TalkFile_media.zip/africa3.jpg"
+        ]
+        function changeImg(a) {
+            const img = document.getElementById("img");
+            index = index + a
+            if (a > 0) {
+                img.src = ImageArr[(index + ImageArr.length) % ImageArr.length];
+            } else {
+                img.src = ImageArr[(index + ImageArr.length) % ImageArr.length];
+                if (index === -4) {
+                    index = 0;
+                };
+            };
+        };
+        //style="background-image: url(../../img/TalkFile_media.zip/);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        body{
+            text-align: center;
+            
+        }
+        #rotateImg{
+            transition: transform 1s;
+        }
+    </style>
+    <!-- form태그 action 속성에는 서버 url이 들어감
+    서버 url에 form 태그 안의 요소를 submit을 누르면 보내지게 됨 
+    action="" 이면 새로고침만 일어남
+     
+    input 이벤트, change이벤트
+
+    input은 입력 할 때마다 발생
+    change는 안의 내용을 바꾼 후 포커스를 잃을 때 발생
+    
+    css에서 transition : transform 1s;
+    변화하는 걸 천천히, transform (스케일 각도 등등 모든 변화)
+     -->
+    <h4>이미지를 클릭해보세요</h4>
+    <img id="rotateImg" src="../../img/TalkFile_media.zip/brazil.jpg">
+    <script>
+        let deg = 0;
+        let image = document.getElementById("rotateImg");
+        image.onclick = ()=>{
+            deg = deg + 5760;
+            image.style.transform = "rotate("+deg+"deg)";
+        };//속성에 직접 넣을때는 함수의 정의를 넣음
+    </script>
+</body>
+
+</html>

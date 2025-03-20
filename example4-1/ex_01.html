@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+    </style>
+    <div id="box" style="width: 300px; height: 300px; margin: auto;"  ></div>
+    <script>
+        const letter = "0123456789ABCDEF"
+        let color = "#";
+        let count = 1;
+        let intevalID = setInterval(()=>{
+            if(++count>50){
+                clearInterval(intevalID);
+            }
+            for(let k = 0; k<6; k++){
+                color = color + letter[Math.floor(Math.random()*16)];
+            }
+            document.getElementById('box').style.backgroundColor=color;
+            document.getElementById('box').style.borderRadius=`${count}%`;
+            color = "#";
+        }, 50);
+    </script>
+</body>
+</html>

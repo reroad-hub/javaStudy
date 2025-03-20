@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+
+    </style>
+
+    <form action="" name="myForm">
+        <label for="userName">이름 : </label>
+        <input type="text" name="userName" id="userName">
+        <input type="checkbox" name="chkbox" id="chkbox">
+        <label for="chkbox">약관에 동의합니다.</label>
+        <button type="submit" name="btn">제출</button>
+    </form>
+    <p id="resultName"></p>
+    <p id="resultAgree"></p>
+
+    <script>
+        //문제풀이
+        //form에 submit이라는 이벤트 발생하면 함수 실행 (form에서는 버튼 누르면 submit 발생)
+        document.myForm.addEventListener("submit", (e) => {
+            e.preventDefault();//객체의 기본기능 안하게 바꾸는 함수
+            // 그냥 새로고침 방지임, 이해안되면 지워보고 ㄱㄱ
+            let agree = document.myForm.chkbox.checked;
+            document.getElementById("resultName").innerText =
+                "이름 : " + document.myForm.userName.value;
+            document.getElementById("resultAgree").innerText = "약관 동의 : " +
+            (agree ? "동의함" : "동의하지 않음");//3항연산자
+        });
+    </script>
+</body>
+
+</html>

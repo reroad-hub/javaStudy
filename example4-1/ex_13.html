@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+
+    </style>
+
+    <form action="" id="myForm" name="myFormName">
+        <label for="name">이름 : </label>
+        <input type="text" id="name" name="userName">
+
+        <input type="checkbox" name="checkAgree" id="agree">
+        <label for="agree">약관에 동의합니다.</label>
+
+        <input type="submit" value="제출">
+    </form>
+    <p id="showName"></p>
+    <p id="showAgree"></p>
+
+    <script>
+        //강사님 풀이
+        document.getElementById("myForm").addEventListener("submit", (e)=>{
+            e.preventDefault();
+            let name = document.getElementById("name").value;
+            // let name = document.myFormName.userName.value;
+            // let name = e.target.userName.value; 셋 다 같음
+            let agree = e.target.checkAgree.checked
+            document.getElementById("showName").innerText = "이름 : " + name;
+            document.getElementById("showAgree").innerText = "약관 동의 : " +
+                        (agree ? "동의함" : "동의하지 않음"); //삼항연산자
+                        //true면 앞 false면 뒤 결과 나옴
+        });
+    </script>
+</body>
+
+</html>

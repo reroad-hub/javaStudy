@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+    </style>
+    <div id="target">
+        <p id="p1">1</p>
+        <p id="p2">2</p>
+        <p id="p3">3</p>
+    </div>
+    <button onclick="remover()">노드지우기</button>
+    <script>
+        let num = 1;
+        function remover(){
+            const parent = document.getElementById("target");
+            const child = document.getElementById(`p${num}`);
+            parent.removeChild(child);
+            num++;
+        }
+
+    </script>
+</body>
+</html>

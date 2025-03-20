@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+
+    </style>
+    <div id="target" class="clearfix">
+        <img src="../../img/TalkFile_media.zip/africa.jpg" id="img">
+        <div>
+            <button id="btn1" onclick="prev()">이전</button>
+            <button id="btn2" onclick="next()">다음</button>
+        </div>
+    </div>
+    <script>
+
+
+        //강사님풀이
+        let index = 0
+        const imageArr = [
+            "../../img/TalkFile_media.zip/africa.jpg",
+            "../../img/TalkFile_media.zip/africa1.jpg",
+            "../../img/TalkFile_media.zip/africa2.jpg",
+            "../../img/TalkFile_media.zip/africa3.jpg"
+        ] //배열에 파일 경로 저장
+        const img = document.getElementById("img");
+        // img태그 객체 img변수에 저장
+
+
+        function prev() {
+            index = (index - 1 + imageArr.length) % imageArr.length;
+            img.src = imageArr[index];
+        }; 
+        // (index - 1 + imageArr.length) % imageArr.length; 의 결과는 0,1,2,3 순으로 나옴
+        function next() {
+            index = (index+1) % imageArr.length;
+            img.src = imageArr[index%imageArr.length];
+        };
+        // (index - 1 + imageArr.length) % imageArr.length; 의 결과는 3,2,1,0 순으로 나옴
+        // 그냥 인덱스 바꿔가면서 사진 출력
+
+        //style="background-image: url(../../img/TalkFile_media.zip/);
+    </script>
+
+</body>
+
+</html>

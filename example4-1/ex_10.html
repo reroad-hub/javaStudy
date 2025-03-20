@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        body{
+            overflow: hidden;
+            
+        }
+        #followMouse{
+            transition: transform 1ms linear;
+        }
+    </style>
+    <!-- linear 가속도 x 변화하는 속도가 일정해지게함
+     -->
+    <img id="followMouse" src="../../img/TalkFile_media.zip/brazil.jpg">
+    <script>
+        let image = document.getElementById("followMouse");
+        document.onmousemove = updateImg;
+        //돔 객체에서 마수으 움직일때 = updateImg 라는 함수 실행 (정의 만 씀)
+        function updateImg(event){
+            const X = event.clientX;
+            const Y = event.clientY;
+            image.style.transform = `translate(${X}px, ${Y}px)`;
+        }
+        //마우스가 움직일때마다 event라는 객체가 무조건 발생함 event 아니면 e 쓰면
+        //매개변수로 받을 수 있음
+    </script>
+</body>
+
+</html>
