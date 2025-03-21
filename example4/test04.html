@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>선수 목록</h2>
+    <input type="text" id="playerInput" placeholder="이름을 입력하세요.">
+
+    <ul id="list"></ul>
+
+    <script>
+
+        // 1.이벤트 리스너 추가
+        // 2.사용자가 입력한 텍스트 가져오기
+        // 3. 배열 필터링
+        // 4. 기존 리스트 초기화
+        // 5. 새로운 필터링된 목록 생성
+        // 6. 리스트 항목 만들기
+        // 7. 리스트 항목을 화면에 추가
+
+        const scPlayers = [
+            { name: "차범근", position: "FW" },
+            { name: "손흥민", position: "FW" },
+            { name: "이천수", position: "FW" },
+            { name: "박지성", position: "MF" },
+            { name: "이강인", position: "MF" },
+            { name: "차두리", position: "DF" },
+            { name: "이영표", position: "DF" },
+            { name: "김영권", position: "DF" },
+            { name: "김민재", position: "DF" },
+            { name: "김덕배", position: "DF" },
+            { name: "이운재", position: "DF" }
+        ];
+        scPlayers.forEach((player) => {
+
+            const li = document.createElement("li");
+
+            li.innerText = player.name + "(" + player.position + ")";
+
+            document.getElementById("list").appendChild(li);
+
+        });
+
+        document.getElementById("playerInput").addEventListener("input", () => {
+
+            let player = document.getElementById("playerInput").value;
+
+            let filterArr = scPlayers.filter((players) => players.name.includes(player));
+
+            document.getElementById("list").innerHTML = "";
+
+            filterArr.forEach((player) => {
+
+                const li = document.createElement("li");
+
+                li.innerText = player.name + "(" + player.position + ")";
+
+                document.getElementById("list").appendChild(li);
+
+            });
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>

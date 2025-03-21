@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product-container {
+            display: flex;
+            gap: 20px
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 150px;
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>제품 목록</h2>
+    <div class="product-container" id="productContainer"></div>
+
+    <script>
+        const path = "../예제img/";
+        const products = [
+            { name: "노트북", price: 1500000, image: path + "IMG_7050.WEBP.webp" },
+            { name: "스마트폰", price: 800000, image: "../예제img/IMG_7052.WEBP.webp" },
+            { name: "테블릿", price: 600000, image: "../예제img/IMG_7051.WEBP.webp" }
+        ];
+        // 'productContainer'라는 id를 가진 HTML 요소를 가져옵니다.
+        const container = document.getElementById("productContainer");
+
+        // 각 제품에 대해 반복하여 카드(div)를 생성하고 그 안에 제품 정보를 채워넣음
+        products.forEach((product) => {
+            const card = document.createElement("div"); // 새 div 요소를 생성하여 카드를 만듬
+            card.className = "product-card"; // 생성한 div에 'product-card'라는 클래스를 추가
+            card.className = "product-card";
+            card.innerHTML = `
+            <img src="${product.image}" width="100" height="100"> 
+            <h3> ${product.name}</h3>
+            <p>가격:${product.price.toLocaleString()}원</p>
+            `;
+
+            // 생성한 'card' 요소를 'productContainer'에 추가하여 화면에 표시
+            container.appendChild(card);
+        });
+
+
+    //------------------------------------------------------------------------------------------------------------------
+
+        // //for문으로 활용
+        
+        // for (let product of products) {
+        //     const card = document.createElement("div"); // 새 div 요소를 생성하여 카드를 만듬
+        //     card.className = "product-card"; // 생성한 div에 'product-card'라는 클래스를 추가
+        //     card.className = "product-card";
+        //     card.innerHTML = `
+        //     <img src="${product.image}" width="100" height="100"> 
+        //     <h3> ${product.name}</h3>
+        //     <p>가격:${product.price.toLocaleString()}원</p>
+        //     `;
+
+        //     // 생성한 'card' 요소를 'productContainer'에 추가하여 화면에 표시
+        //     container.appendChild(card);
+        // }
+
+    </script>
+</body>
+
+</html>
