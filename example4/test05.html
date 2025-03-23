@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또번호 만들기</title>
+    <link rel="stylesheet" href="../example4/test05.css">
+</head>
+
+<body>
+
+    <h2>로또 번호 생성기</h2>
+
+    <button id="makingLotto">로또 번호 생성</button>
+
+    <div class="lottoNumbers">
+        <span class="lottoNum"></span>
+        <span class="lottoNum"></span>
+        <span class="lottoNum"></span>
+        <span class="lottoNum"></span>
+        <span class="lottoNum"></span>
+        <span class="lottoNum"></span>
+    </div>
+
+    <script>
+
+        document.getElementById("makingLotto").addEventListener("click", () => {
+
+            let numbers = [];
+
+            while (numbers.length < 6) {
+                let randomNumbers = Math.floor(Math.random() * 45) + 1;// +1을 더하는 이유는 숫자 1부터 시작시키기 위해서이다.
+
+                if (numbers.indexOf(randomNumbers) === -1) { // 중복되지 않는 랜덤 번호를 거른다. includes를 활용해도 된다.
+                    numbers.push(randomNumbers); // 랜덤번호를 배열에 추가한다.
+                }
+            }
+            numbers.sort((a, b) => a - b); // 숫자들을 작은 숫자부터 큰 숫자 순으로 정렬
+
+            // lottoContainer 변수는 .lottoNumbers 클래스를 가진 부모 요소를 참조한다. 이 요소 안에 있는 6개의 span 요소에 번호를 삽입하려면, 
+            // 부모 요소인 lottoContainer를 먼저 선택해야 한다. lottoContainer는 각각의 span 요소에 번호를 넣기 위한 참조로 사용된다.
+            let lottoContainer = document.querySelector(".lottoNumbers");
+
+            // lottoSpans 변수는 NodeList로 .lottoNum 클래스를 가진 6개의 spn 태그들이 lottoSpans에 저장된다.
+            let lottoSpans = lottoContainer.querySelectorAll(".lottoNum");
+
+            for (let i = 0; i < 6; i++) {   // 번호를 각각의 span 요소에 채워 넣기
+                lottoSpans[i].textContent = numbers[i]; // 각 span에 번호를 할당
+            }
+
+        });
+
+
+    </script>
+</body>
+
+</html>
