@@ -9,9 +9,9 @@
 
 <body>
     <h2>선수 목록</h2>
-    <input type="text" id="playerInput" placeholder="이름을 입력하세요.">
+    <input type="text" id="searchInput" placeholder="이름을 입력하세요.">
 
-    <ul id="list"></ul>
+    <ul id="playerList"></ul>
 
     <script>
 
@@ -23,7 +23,7 @@
         // 6. 리스트 항목 만들기
         // 7. 리스트 항목을 화면에 추가
 
-        const scPlayers = [
+        const players = [
             { name: "차범근", position: "FW" },
             { name: "손흥민", position: "FW" },
             { name: "이천수", position: "FW" },
@@ -36,35 +36,63 @@
             { name: "김덕배", position: "DF" },
             { name: "이운재", position: "DF" }
         ];
-        scPlayers.forEach((player) => {
 
-            const li = document.createElement("li");
+        // // 배열을 받아서 리스트 항목을 렌더링하는 함수
+        // function renderList(arrList) {
 
-            li.innerText = player.name + "(" + player.position + ")";
+        //     // 기존의 플레이어 목록을 비움
+        //     document.getElementById("playerList").innerHTML = "";
+        //     // 전달받은 배열(arrList)을 반복하며, 각 선수의 이름과 포지션을 표시
+        //     for (let player of arrList) {
+        //         // 새로운 <li> 요소를 생성
+        //         const li = document.createElement("li");
+        //         // <li>의 텍스트에 선수 이름과 포지션 추가
+        //         li.innerText = `${player.name} (${player.position})`;
+        //         // 생성한 <li> 요소를 'playerList' 요소에 추가
+        //         document.getElementById("playerList").appendChild(li);
+        //     }
+        // }
+        // // 페이지가 로드될 때, players 배열을 기반으로 초기 목록을 렌더링
+        // renderList(players);
 
-            document.getElementById("list").appendChild(li);
+        // document.getElementById("searchInput").addEventListener("input", (e) => {
 
+        //     // 사용자가 입력한 검색어를 가져옴
+        //     const searchChar = e.target.value;
+
+        //     // players 배열에서, 이름에 검색어가 포함된 선수들만 필터링
+        //     const filterPlayers = players.filter((player) => player.name.includes(searchChar));
+
+        //     // 필터링된 선수 목록을 renderList 함수로 렌더링
+        //     renderList(filterPlayers);
+        // });
+
+
+        //---------------------------------------------------------------------------------------------
+
+
+        //map 활용법
+
+        // 배열을 받아서 리스트 항목을 렌더링하는 함수
+        function renderList(arrList) {
+
+            // 'playerList'라는 id를 가진 <ul> 요소를 가져옴
+            const playerList = document.getElementById("playerList");
+
+            // 배열을 순회하면서 각 항목을 <li> 태그로 변환하여, 이를 join으로 합쳐서 한 번에 HTML로 삽입
+            playerList.innerHTML = arrList.map((player) => 
+                `<li>${player.name}(${player.position})</li>`)  // 각 선수를 <li> 항목으로 변환
+                .join("");  // 각 <li> 항목을 하나의 문자열로 합침
+        }
+
+        renderList(players);
+
+        document.getElementById("searchInput").addEventListener("input", (e) => {
+            const searchChar = e.target.value;
+            const filterPlayers = players.filter((player) => player.name.includes(searchChar));
+
+            renderList(filterPlayers);
         });
-
-        document.getElementById("playerInput").addEventListener("input", () => {
-
-            let player = document.getElementById("playerInput").value;
-
-            let filterArr = scPlayers.filter((players) => players.name.includes(player));
-
-            document.getElementById("list").innerHTML = "";
-
-            filterArr.forEach((player) => {
-
-                const li = document.createElement("li");
-
-                li.innerText = player.name + "(" + player.position + ")";
-
-                document.getElementById("list").appendChild(li);
-
-            });
-        });
-
 
     </script>
 
